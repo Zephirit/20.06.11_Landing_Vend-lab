@@ -13,20 +13,88 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/main.mjs"></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main.js"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
       <div class="content">
         <header class="header animated slideInDown">
-          <h2 class="header__title">Шапка сайта</h2>
+          <div class="header__content">
+            <div class="header__info">
+              <div class="header__logo hvr-grow"><a class="header__tohome" href="/"><img src="./img/header_logo.png" alt="logo"></a></div>
+              <div class="header__title">
+                <div class="decision"><span>Профессиональные </span><span>решения в области вендинга</span></div>
+              </div>
+            </div>
+            <div class="header__contacts">
+              <div class="contacts">
+                <div class="header__phone hvr-grow"><a class="header__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
+                <div class="header__social">
+                  <div class="contacts"><a class="contacts__link hvr-grow" href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a><a class="contacts__link hvr-grow" href="#"><img src="./img/viber.png" alt="viber"></a><a class="contacts__link hvr-grow" href="#"><img src="./img/telegram.png" alt="telegram"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__line"></div>
+              <div class="header__demo"><span class="hvr-grow">Демо-доступ</span></div>
+              <div class="header__burger hvr-grow">
+                <div class="burger hvr-grow" id="burger">
+                  <div class="burger__line"></div>
+                  <div class="burger__line"></div>
+                  <div class="burger__line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </header>
+        <nav class="navigation">
+          <div class="navigation__content">
+            <div class="navigation__demo navigation--botline"><span class="hvr-grow">Демо-доступ</span>
+              <div class="navigation__close" id="nav-close">+</div>
+            </div>
+            <div class="navigation__order hvr-grow navigation--botline">
+              <div class="order"><img src="./img/call.png" alt="order-icon"><span>Заказать звонок</span></div>
+            </div>
+            <ul class="navigation__list">
+              <li class="navigation__item navigation--botline">Главная</li>
+              <li class="navigation__item navigation--botline">О компании</li>
+              <li class="navigation__item navigation--botline">Система и компоненты CRM</li>
+              <li class="navigation__item navigation--botline">Вендинг аналитика</li>
+              <li class="navigation__item navigation--botline">Тарифы и цены</li>
+              <li class="navigation__item navigation--botline">Полезная информация</li>
+            </ul>
+          </div>
+        </nav>
         <section class="section preview animated fadeIn">
           <h1 class="preview__title">Секция Preview</h1>
         </section>
         <section class="section advantages animated fadeIn">
-          <h2 class="advantages__title">Секция Advantages</h2>
+          <div class="advantages__content">
+            <div class="advantages__items">
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="./img/advantages_gear.png" alt="logo"></div>
+                <div class="advantages__text">
+                  <h2 class="advantages__title">Уникальность</h2>
+                  <p class="advantages__desc">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом</p>
+                  <p class="advantages__advanced">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом для всех устройств</p>
+                </div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="./img/advantages_computer.png" alt="logo"></div>
+                <div class="advantages__text"> 
+                  <h2 class="advantages__title">Контроль</h2>
+                  <p class="advantages__desc">Полный контроль за автоматами 24/7 с хранением данных на своем сервере</p>
+                </div>
+              </div>
+              <div class="advantages__item">
+                <div class="advantages__img"><img src="./img/advantages_machine.png" alt="logo"></div>
+                <div class="advantages__text">
+                  <h2 class="advantages__title">Любое оборудование</h2>
+                  <p class="advantages__desc">Весь спектр оборудования от кассы до GSM модуля</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="section about animated fadeIn">
           <h2 class="about__title">Секция About</h2>
@@ -42,7 +110,18 @@
         </section>
       </div>
       <footer class="footer animated slideInUp">
-        <h3 class="footer__title">Footer должен быть прикреплен к низу страницы</h3>
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__logo hvr-grow"><a class="footer__tohome" href="/"><img src="./img/footer_logo.png" alt="logo"></a></div>
+            <div class="footer__title">
+                  <div class="decision decision--footer"><span>Профессиональные </span><span>решения в области вендинга</span></div>
+            </div>
+          </div>
+          <div class="footer__contacts"></div>
+          <div class="footer__address"></div>
+          <div class="footer__download"></div>
+          <div class="footer__access"></div>
+        </div>
       </footer>
     </div>
   </body>
