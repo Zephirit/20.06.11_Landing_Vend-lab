@@ -1,0 +1,12 @@
+/* ---HEADER--- */
+.header{
+	&__title{
+		font-size: 12px;
+		@include desktop{
+			font-size: 20px;
+		}
+		@include tablets{
+			font-size: 16px;
+		}
+	}
+}

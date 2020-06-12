@@ -26,7 +26,8 @@ body, html {
   font-style: normal;
 }
 
-section {
+/* ---ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ INDEX--- */
+.section {
   position: relative;
   width: 100%;
   height: 100%;
@@ -37,8 +38,12 @@ section {
   padding: 10px 0;
 }
 
-section:nth-child(2n) {
+.section:nth-child(2n) {
   background: #fc5185;
+}
+
+.section__title {
+  text-transform: uppercase;
 }
 
 header {
@@ -53,14 +58,123 @@ header {
   padding: 5px 0;
 }
 
-.preview {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #3fc1c9;
+/* ---СЕКЦИЯ PREVIEW--- */
+.preview__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .preview__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .preview__title {
+    font-size: 16px;
+  }
+}
+
+/* ---СЕКЦИЯ ADVANTAGESS--- */
+.advantages__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .advantages__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages__title {
+    font-size: 16px;
+  }
+}
+
+/* ---СЕКЦИЯ ABOUT--- */
+.about__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .about__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about__title {
+    font-size: 16px;
+  }
+}
+
+/* ---СЕКЦИЯ REVIEWS--- */
+.reviews__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .reviews__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .reviews__title {
+    font-size: 16px;
+  }
+}
+
+/* ---СЕКЦИЯ NEWS--- */
+.news__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .news__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .news__title {
+    font-size: 16px;
+  }
+}
+
+/* ---СЕКЦИЯ PARTNERS--- */
+.partners__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .partners__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .partners__title {
+    font-size: 16px;
+  }
+}
+
+/* ---HEADER--- */
+.header__title {
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .header__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 16px;
+  }
 }
 
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
