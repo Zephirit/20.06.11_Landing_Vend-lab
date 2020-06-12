@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/hover-min.css">
     <link rel="stylesheet" href="./css/app.css">
-    <script type="module" src="./js/main.js"></script><!--[if lt IE 9]>
+    <script type="module" src="./js/main.mjs"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -28,13 +28,13 @@
               </div>
             </div>
             <div class="header__contacts">
-              <div class="contacts">
-                <div class="header__phone hvr-grow"><a class="header__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
-                <div class="header__social">
-                  <div class="contacts"><a class="contacts__link hvr-grow" href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a><a class="contacts__link hvr-grow" href="#"><img src="./img/viber.png" alt="viber"></a><a class="contacts__link hvr-grow" href="#"><img src="./img/telegram.png" alt="telegram"></a>
+                  <div class="contacts">
+                    <div class="contacts__phone hvr-grow"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
+                    <div class="contacts__social">
+                          <div class="social"><a class="social__link hvr-grow" href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a><a class="social__link hvr-grow" href="#"><img src="./img/viber.png" alt="viber"></a><a class="social__link hvr-grow" href="#"><img src="./img/telegram.png" alt="telegram"></a>
+                          </div>
+                    </div>
                   </div>
-                </div>
-              </div>
               <div class="header__line"></div>
               <div class="header__demo"><span class="hvr-grow">Демо-доступ</span></div>
               <div class="header__burger hvr-grow">
@@ -72,32 +72,60 @@
           <div class="advantages__content">
             <div class="advantages__items">
               <div class="advantages__item">
-                <div class="advantages__img"><img src="./img/advantages_gear.png" alt="logo"></div>
+                <div class="advantages__img"><img src="./img/advantages_gear.png" alt="Unique"></div>
                 <div class="advantages__text">
-                  <h2 class="advantages__title">Уникальность</h2>
-                  <p class="advantages__desc">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом</p>
-                  <p class="advantages__advanced">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом для всех устройств</p>
+                  <h3 class="advantages__title">Уникальность</h3><span class="advantages__desc">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом</span><span class="advantages__advanced">Уникальная CRM для вендинг компаний с широчайшим спектром отчетов и современным личным кабинетом для всех устройств</span>
                 </div>
               </div>
               <div class="advantages__item">
-                <div class="advantages__img"><img src="./img/advantages_computer.png" alt="logo"></div>
+                <div class="advantages__img"><img src="./img/advantages_computer.png" alt="Control"></div>
                 <div class="advantages__text"> 
-                  <h2 class="advantages__title">Контроль</h2>
-                  <p class="advantages__desc">Полный контроль за автоматами 24/7 с хранением данных на своем сервере</p>
+                  <h2 class="advantages__title">Контроль</h2><span class="advantages__desc">Полный контроль за автоматами 24/7 с хранением данных на своем сервере</span>
                 </div>
               </div>
               <div class="advantages__item">
-                <div class="advantages__img"><img src="./img/advantages_machine.png" alt="logo"></div>
+                <div class="advantages__img"><img src="./img/advantages_machine.png" alt="Equipment"></div>
                 <div class="advantages__text">
-                  <h2 class="advantages__title">Любое оборудование</h2>
-                  <p class="advantages__desc">Весь спектр оборудования от кассы до GSM модуля</p>
+                  <h2 class="advantages__title">Любое оборудование</h2><span class="advantages__desc">Весь спектр оборудования от кассы до GSM модуля</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="section about animated fadeIn">
-          <h2 class="about__title">Секция About</h2>
+          <h2 class="about__title">О компании</h2>
+          <div class="about__content">
+            <div class="about__items">
+              <div class="about__item">
+                <div class="about__heading">
+                  <div class="about__img"><img src="./img/about_lineal.png" alt="logo"></div>
+                  <h3 class="about__name">Многолетний опыт</h3>
+                </div>
+                <div class="about__text"><span class="about__desc">Венд-Аналитика присутствует на рынке с 2011 года. Функционал нашей системы постоянно расширяется, в том числе благодаря обратной связи от наших партнеров и клиентов - вендинговых компаний из России и ближнего зарубежья.</span></div>
+              </div>
+              <div class="about__item">
+                <div class="about__heading">
+                  <div class="about__img"><img src="./img/about_diamond.png" alt="logo"></div>
+                  <h3 class="about__name">Уникальность</h3>
+                </div>
+                <div class="about__text"><span class="about__desc">Наша CRM не имеет аналогов на рынке, кроме стандартных отчетов и полного контроля за расходами мы помогаем нашим клиентам строить уникальные отчеты и получать статистику в самых сложных разрезах, без привлечения программистов и подключения сторонних дорогостоящих систем.</span></div>
+              </div>
+              <div class="about__item">
+                <div class="about__heading">
+                  <div class="about__img"><img src="./img/about_chat.png" alt="logo"></div>
+                  <h2 class="about__name">Помощь в интеграции</h2>
+                </div>
+                <div class="about__text"><span class="about__desc">Легкая интеграция с популярными системами учета (1С и т.д.) поможет вашим сотрудникам легко овладеть необходимыми инструментами, а наши специалисты с удовольствием обучат вас навыкам работы и ответят на вопросы по оборудованию и ПО, необходимому для работы.</span></div>
+              </div>
+              <div class="about__item">
+                <div class="about__heading">
+                  <div class="about__img"><img src="./img/about_network.png" alt="logo"></div>
+                  <h2 class="about__name">Удобное размещение ПО</h2>
+                </div>
+                <div class="about__text"><span class="about__desc">Отличительной особенностью Венд-Аналитики является возможность для любой компании развернуть серверное ПО в своем офисе и стать полностью независимой от поставщика решения, в том числе исключить из эксплуатационных расходов абонентскую плату.</span></div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="section reviews animated fadeIn">
           <h2 class="reviews__title">Секция Reviews</h2>
@@ -117,10 +145,32 @@
                   <div class="decision decision--footer"><span>Профессиональные </span><span>решения в области вендинга</span></div>
             </div>
           </div>
-          <div class="footer__contacts"></div>
-          <div class="footer__address"></div>
-          <div class="footer__download"></div>
-          <div class="footer__access"></div>
+          <div class="footer__contacts">
+                <div class="contacts contacts--footer">
+                  <div class="contacts__phone hvr-grow"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
+                  <div class="contacts__social">
+                        <div class="social"><a class="social__link hvr-grow" href="#"><img src="./img/whatsapp.png" alt="whatsapp"></a><a class="social__link hvr-grow" href="#"><img src="./img/viber.png" alt="viber"></a><a class="social__link hvr-grow" href="#"><img src="./img/telegram.png" alt="telegram"></a>
+                        </div>
+                  </div>
+                </div>
+          </div>
+          <div class="footer__address">
+            <div class="address">
+              <h4 class="address__title">Адрес:</h4><span>г. Москва, ул. Ивана Франко, д. 48, корп. 1</span>
+            </div>
+          </div>
+          <div class="footer__download">
+            <div class="download">
+              <div class="download__windows download__item"><a href="#"><img src="./img/windows.png" alt="windows"><span class="download__text">Скачать для Windows</span></a></div>
+              <div class="download__item download__android"><a href="#"><img src="./img/android.png" alt="android"><span class="download__text">Скачать для Android</span></a></div>
+            </div>
+          </div>
+          <div class="footer__access">
+            <div class="access">
+              <div class="access__politic"><span>Политика конфиденциальности</span></div>
+              <div class="access__created"><span>Сайт создан в РУ ДИЗАЙН</span></div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

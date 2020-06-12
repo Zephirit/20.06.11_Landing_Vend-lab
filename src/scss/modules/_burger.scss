@@ -1,0 +1,21 @@
+/* ---КОМПОНЕНТ БУРГЕР--- */
+.burger{
+	position: relative;
+	
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 20px;
+	height: 20px;
+	&__line{
+		position: relative;
+		width: 100%;
+		height: 2px;
+		background: $mainColor;
+		border-radius: 1px;
+	}
+	&.active{
+		
+	}
+}

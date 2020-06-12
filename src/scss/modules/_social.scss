@@ -1,0 +1,16 @@
+/* ---КОМПОНЕНТ ССЫЛКИ НА СОЦСЕТИ--- */
+.social{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__link{
+		position: relative;
+		width: 20px;
+		height: 20px;
+		padding: 7px;
+		& img{
+
+		}
+	}
+}

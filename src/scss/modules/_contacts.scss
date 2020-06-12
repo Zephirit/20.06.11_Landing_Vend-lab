@@ -1,0 +1,57 @@
+/* ---КОМПОНЕНТ КОНТАКТЫ--- */
+.contacts {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	&__link {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		padding: 7px;
+
+		& img {}
+	}
+
+	&__phone {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 65px;
+
+		order: 3;
+
+		& a {
+			text-decoration: none;
+			font-size: 18px;
+			color: $mainColor;
+		}
+
+
+		@include tablets {
+			margin-right: 20px;
+			margin-left: auto;
+		}
+	}
+
+	&__social {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 65px;
+		order: 4;
+
+		@include tablets {
+			margin-right: 40px;
+		}
+	}
+
+	&--footer {
+		& a {
+			color: $backColor;
+		}
+
+	}
+}

@@ -1,0 +1,64 @@
+.download {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&__item {
+		& a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			color: $backColor;
+		}
+
+		& img {
+			position: relative;
+			width: 22px;
+			margin-right: 10px;
+		}
+
+		& .download__text {
+			position: relative;
+			&:after {
+				position: absolute;
+				content: '';
+				left: 0;
+				bottom: 0;
+				height: 1px;
+				width: 100%;
+
+				transition: all .4s;
+			}
+		}
+
+	}
+
+	&__windows {
+		& .download__text {
+			&:after {
+				background: #1f3c47;
+			}
+		}
+
+		&:hover {
+			& .download__text:after {
+				background: lighten(#1f3c47, 30%);
+			}
+		}
+	}
+
+	&__android {
+		& .download__text {
+			&:after {
+				background: #224926;
+			}
+		}
+
+		&:hover {
+			& .download__text:after {
+				background: lighten(#224926, 30%);
+			}
+		}
+	}
+}

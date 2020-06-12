@@ -1,8 +1,18 @@
 /* ---НАСТРОЙКА ШРИФТОВ СТРАНИЦЫ--- */
+
 @font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Regular.eot');
-	src: local('☺'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype');
-	font-weight: 400;
+	font-family: 'Acrom';
+	src: local('Acrom Regular'), local('Acrom-Regular'),
+			url('../fonts/Acrom-Regular.ttf') format('truetype');
+	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Circe';
+	src: local('Circe Regular'), local('Circe-Regular'),
+			url('../fonts/Circe-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+

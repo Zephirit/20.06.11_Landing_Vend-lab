@@ -1,0 +1,44 @@
+/* ---КОМПОНЕНТ РЕШЕНИЯ--- */
+.decision {
+	position: relative;
+	max-width: 205px;
+	font-size: 16px;
+	font-family: "Acrom";
+	color: $mainColor;
+	&--footer{
+		color: $backColor;
+	}
+
+	&:before {
+		content: '';
+		@include centered(y);
+		opacity: 0;
+		left: 0;
+		width: 1px;
+		height: 75%;
+		background: rgba($mainColor, .2);
+	}
+	& span {
+		&:nth-child(1) {
+			display: none;
+		}
+
+	}
+	@include tablets {
+		max-width: 260px;
+		padding: 12px;
+		
+		&:before {
+			opacity: 1;
+		}
+
+		& span {
+			&:nth-child(1) {
+				display: inline;
+			}
+
+		}
+	}
+
+
+}

@@ -1,2 +1,18 @@
 footer.footer.animated.slideInUp
-    h3.footer__title Footer должен быть прикреплен к низу страницы
+	.footer__content
+		.footer__info
+			.footer__logo.hvr-grow
+				a(href="/").footer__tohome
+					img(src="./img/footer_logo.png", alt="logo")
+			.footer__title
+				+decision('decision--footer')
+		.footer__contacts
+			+contacts('contacts--footer')
+		.footer__address
+			.address
+				h4.address__title Адрес:
+				span г. Москва, ул. Ивана Франко, д. 48, корп. 1
+		.footer__download
+			include ./_download
+		.footer__access
+			include ./_access

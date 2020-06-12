@@ -1,0 +1,9 @@
+/* ---КОМПОНЕНТ ЗАКАЗЫ--- */
+.order{
+	display: flex;
+	align-items: center;
+	color: $contrColor;
+	& span{
+		padding-left: 5px;
+	}
+}

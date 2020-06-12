@@ -1,8 +1,8 @@
 //Переменные
-$mainColor: #364f6b;
-$subColor: #3fc1c9;
-$backColor: #f5f5f5;
-$contrColor: #fc5185;
+$mainColor: rgb(16,16,16);
+$subColor: rgb(30,45,89);
+$backColor: white;
+$contrColor: rgb(0,194,246);
 //Общие настройки стилей
 @import "./base/_mixins.scss";
 @import "./base/_base.scss";
@@ -19,5 +19,12 @@ $contrColor: #fc5185;
 @import "./modules/_4-reviews.scss";
 @import "./modules/_5-news.scss";
 @import "./modules/_6-partners.scss";
+@import "./modules/_navigation.scss";
+@import "./modules/_social.scss";
+@import "./modules/_contacts.scss";
+@import "./modules/_burger.scss";
+@import "./modules/_decision.scss";
+@import "./modules/_download.scss";
+@import "./modules/_order.scss";
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";

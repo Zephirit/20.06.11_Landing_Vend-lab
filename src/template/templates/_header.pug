@@ -1,2 +1,15 @@
 header.header.animated.slideInDown
-	h2.header__title Шапка сайта
+	.header__content
+		.header__info
+			.header__logo.hvr-grow
+				a(href="/").header__tohome
+					img(src="./img/header_logo.png", alt="logo")
+			.header__title
+				include ./_decision
+		.header__contacts
+			+contacts
+			.header__line
+			.header__demo
+				span.hvr-grow Демо-доступ
+			.header__burger.hvr-grow
+				include ./_burger
