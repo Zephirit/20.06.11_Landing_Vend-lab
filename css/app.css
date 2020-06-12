@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* ---БАЗОВАЯ НАСТРОЙКА СТРАНИЦЫ--- */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #f5f5f5;
+  color: #364f6b;
+  overflow-x: hidden;
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+/* ---НАСТРОЙКА ШРИФТОВ СТРАНИЦЫ--- */
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3fc1c9;
+  padding: 10px 0;
+}
+
+section:nth-child(2n) {
+  background: #fc5185;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #364f6b;
+  color: #f5f5f5;
+  padding: 5px 0;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3fc1c9;
+}
+
+/* ---ПОДВАЛ СТРАНИЦЫ--- */
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  position: relative;
+  background-color: #364f6b;
+  color: #f5f5f5;
+  flex: 0 0 auto;
+}
+
+.footer {
+  text-align: center;
+}

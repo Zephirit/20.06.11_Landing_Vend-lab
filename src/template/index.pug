@@ -1,0 +1,15 @@
+//- Наследуемый шаблон _template
+extends ./templates/_template
+block variables
+	- var title = "Vend-lab"
+//- Тело блока
+block content
+	.content
+		include ./templates/_header
+		include ./templates/_1-preview
+		include ./templates/_2-advantages
+		include ./templates/_3-about
+		include ./templates/_4-reviews
+		include ./templates/_5-news
+		include ./templates/_6-partners
+	include ./templates/_footer
