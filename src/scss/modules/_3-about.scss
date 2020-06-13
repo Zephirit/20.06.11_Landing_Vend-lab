@@ -10,11 +10,13 @@
 		background: rgba($mainColor,.02);
 		padding: 0;
 		@include tablets {
-			height: 360px;
+			align-items: flex-start;
+			height: auto;
 		}
 		@include desktop {
-			height: 340px;
+			height: auto;
 		}
+	
 	&__title {
 		position: relative;
 		display: block;
@@ -34,6 +36,9 @@
 			width: 45px;
 			background-color: $mainColor;
 		}
+		@include tablets {
+			font-size: 35px;
+		}
 	}
 	&__content {
 		position: relative;
@@ -42,6 +47,10 @@
 		display: flex;		
 		justify-content: center;
 		align-items: center;
+		@include tablets {
+			width: calc(100% - 180px);	
+		}
+		
 		@include desktop {
 			width: 1170px;
 			padding: 0;
@@ -51,15 +60,15 @@
 		position: relative;
 		height: 100%;
 		width: 100%;
-		max-width: 345px;
+		max-width: 600px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		margin: 33px 15px 60px;
 		@include tablets {
-			flex-direction: row;
+			flex-direction: column;
 			justify-content: center;
-			margin: 73px 20px;
+			margin: 45px 0 80px 20px;
 			height: auto;
 			width: auto;
 			max-width: none;
@@ -78,23 +87,13 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		&:first-child {
-
-		}
-		&:nth-child(2n+2) {
-				margin: 25px 0;
-			}
+		margin: 12px 0;
+		
 		@include tablets {
 			// width: 33%;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: flex-start;
 			justify-content: flex-start;
-			&:nth-child(2) {
-				margin: 0 69px;
-			}
-			&:last-child {
-				// width: 26.5%;
-			}
 		}
 		@include desktop {
 			width: 370px;
@@ -128,6 +127,23 @@
 			}
 		}	
 	}
+	&__point {
+		position: relative;
+		display: none;
+		@include tablets {
+			display: flex;
+			justify-content: flex-start;
+			width: auto;
+			height: 100%;
+			margin: 10px 10px 0 0;
+		}
+	}
+
+	&__main {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
 	&__heading {
 		position: relative;
 		width: 100%;
@@ -140,8 +156,8 @@
 	&__img {
 		position: relative;
 		align-self: flex-start;
-		height: 56px;
-		width: 56px;
+		// height: 56px;
+		// width: 56px;
 		margin-right: 22px;
 	}
 	&__text {
@@ -149,7 +165,7 @@
 		display: flex;
 		flex-direction: column;
 		@include tablets {
-		margin-top: 21px;
+		// margin-top: 15px;
 		}
 	}
 	&__name{
@@ -167,7 +183,7 @@
 		font-weight: 300;
 		font-size: 13px;
 		line-height: 22px;
-		margin: 19px 0 0;
+		margin: 15px 0 0;
 		@include desktop {
 			font-size: 15px;
 			line-height: 24px;
@@ -183,6 +199,39 @@
 			font-size: 15px;
 			margin: 10px 0 0;
 			line-height: 24px;
+		}
+	}
+	&__image {
+		display: none;
+		@include tablets {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: scale(1.4);
+			right: -200px;
+		}
+		img {
+			z-index: 1;
+		}
+	}
+	&__logo {
+		@include centered;
+		transform: translate(-50%, -220%);
+		z-index: 2;
+
+	}
+	&__slogan {
+		@include centered;
+		
+		display: inline-block;
+		z-index: 2;
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+		color: $backColor;
+		&:first-line {
+			font-weight: normal;
 		}
 	}
 }
