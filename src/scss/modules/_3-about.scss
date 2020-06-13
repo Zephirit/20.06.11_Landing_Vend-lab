@@ -14,16 +14,16 @@
 			height: auto;
 		}
 		@include desktop {
-			height: auto;
+			height: 1000px;
+			align-items: center;
 		}
 	
 	&__title {
 		position: relative;
 		display: block;
 		width: 100%;
-		margin: 55px 0 0;
+		margin: 55px 0 0 15px;
 		padding-bottom: 23px;
-		left: 15px;
 		font-size: 30px;
 		font-weight: 700;
 		&::after {
@@ -35,9 +35,17 @@
 			height: 3px;
 			width: 45px;
 			background-color: $mainColor;
+			@include desktop {
+				@include centered(x)
+				width: 60px;
+			}
 		}
 		@include tablets {
 			font-size: 35px;
+		}
+		@include desktop {
+			width: auto;
+			margin: 55px 0 0;
 		}
 	}
 	&__content {
@@ -54,6 +62,7 @@
 		@include desktop {
 			width: 1170px;
 			padding: 0;
+			z-index: 5;
 		}		
 	}
 	&__items {
@@ -75,10 +84,13 @@
 		}
 		@include desktop {
 			flex-direction: row;
+			justify-content: space-between;
 			max-width: 1170px;
-			height: calc(100% - 60px);
+			height: auto;
+			flex-wrap: wrap;
 			margin: 30px 0;
 		}
+		
 	}
 	&__item {
 		position: relative;
@@ -97,52 +109,92 @@
 		}
 		@include desktop {
 			width: 370px;
-			box-shadow: 5px 5px 20px rgba(black,.1);
-			padding: 35px;
-			&:first-child {
-				.advantages__desc {
-					@include desktop {
-						display: none;
-					}
+			// box-shadow: 5px 5px 20px rgba(black,.1);
+			padding: 0;
+		}
+		&:nth-child(1) {
+			margin-right: 100px;
+
+		}
+		&:nth-child(3) {
+			@include desktop {
+				order: 1;
+				.about__point {
+					transform: rotateY(180deg);
+					left: -140px;
 				}
 			}
-			&:nth-child(2) {
-				width: 370px;
-				margin: 0 30px;
-			}
-			&:last-child {
-				width: 370px;
+		}	
+		&:nth-child(2) {
+			@include desktop {
+				.about__point {
+					transform: rotateY(180deg);
+					left: -140px;
+				}
 			}
 		}
-		&::after {
-			@include desktop {
-				position: absolute;
-				display: block;
-				content: '';
-				bottom: 0;
-				left: 35px;
-				height: 2px;
-				width: 60px;
-				background-color: $mainColor;
-			}
-		}	
 	}
 	&__point {
 		position: relative;
 		display: none;
 		@include tablets {
 			display: flex;
+			flex-direction: column;
 			justify-content: flex-start;
-			width: auto;
-			height: 100%;
-			margin: 10px 10px 0 0;
+			align-items: center;
+			width: 70px;
+			height: 50px;
 		}
+		@include desktop {
+			position: absolute;
+			display: flex;
+			align-items: flex-end;
+			width: 285px;
+			right: -140px;
+			// justify-content: flex-end;
+			// align-items: flex-end;
+		}
+	}
+	&__pointer {
+		@include tablets {
+			position: relative;
+			height: 50px;
+			width: 100%;
+			& img {
+				height: 35px;
+				width: 35px;
+				@include centered(y);
+			}
+		}
+		@include desktop {
+			position: relative;
+			display: flex;
+			height: 50px;
+			width: 50px;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__line {
+		@include tablets {
+			@include centered;
+			height: 1px;
+			width: 40px;
+			background: linear-gradient(to left, $subColor, $contrColor 70%);
+		}
+		@include desktop {
+			width: 255px;
+			left: auto;
+			background: linear-gradient(to right, $subColor, $contrColor 70%);
+		}
+
 	}
 
 	&__main {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		flex: 1 0;
 	}
 	&__heading {
 		position: relative;
@@ -151,6 +203,10 @@
 		justify-content: flex-start;
 		align-items: center;
 		height: auto;
+		@include desktop {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
 
 	}
 	&__img {
@@ -159,6 +215,11 @@
 		// height: 56px;
 		// width: 56px;
 		margin-right: 22px;
+		@include desktop {
+			margin: 0;
+			align-self: center;
+			margin-bottom: 20px;
+		}
 	}
 	&__text {
 		position: relative;
@@ -173,7 +234,7 @@
 		margin: 0;
 		font-size: 20px;
 		@include desktop {
-			font-size: 24px;
+			// font-size: 24px;
 		}	
 	}
 	&__desc {
@@ -184,10 +245,14 @@
 		font-size: 13px;
 		line-height: 22px;
 		margin: 15px 0 0;
+		@include tablets {
+			max-width: 600px;
+			}
 		@include desktop {
-			font-size: 15px;
+			font-size: 14px;
 			line-height: 24px;
-			margin: 10px 0 0;
+			margin: 18px 0 0;
+			text-align: center;
 		}
 	}
 	&__advanced {
@@ -208,30 +273,87 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			transform: scale(1.4);
-			right: -200px;
+			height: 850px;
+			width: 520px;
+			// transform: scale(1.4);
+			right: -315px;
+			top: 100px;
+
 		}
 		img {
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+		}
+		@include desktop {
+			@include centered;
+			height: 680px;
+			width: 415px;
+			top: 56%;
 			z-index: 1;
 		}
 	}
 	&__logo {
 		@include centered;
+		height: 65px;
+		width: 220px;
 		transform: translate(-50%, -220%);
 		z-index: 2;
+		& img {
+			height: 100%;
+			width: 100%;
+		}
+		@include desktop {
+			height: 50px;
+			width: 165px;
+			top: 42%;
+
+		}
 
 	}
 	&__slogan {
 		@include centered;
-		
 		display: inline-block;
 		z-index: 2;
-		font-size: 20px;
+		font-size: 30px;
 		font-weight: 700;
 		text-align: center;
 		color: $backColor;
 		&:first-line {
 			font-weight: normal;
+		}
+		@include desktop {
+			font-size: 20px;
+			top: 45%;
+		}
+	}
+	&__start {
+		display: none;
+		@include desktop {
+			@include centered(x)
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			bottom: 200px;
+			width: 195px;
+			height: 45px;
+			border-radius: 5px;
+			border: 1px solid $backColor;
+			color: $backColor;
+			background: none;
+			font-size: 15px;
+			font-family: Acrom;
+			font-weight: 700;
+			cursor: pointer;
+			transition: .3s;
+			&:hover {
+				box-shadow: 0 0 5px $mainColor;
+			}
+			&:focus {
+				box-shadow: inset 0 0 10px $backColor;
+				outline: none;
+			}
 		}
 	}
 }

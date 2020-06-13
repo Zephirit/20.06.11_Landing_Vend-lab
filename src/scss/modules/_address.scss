@@ -1,0 +1,17 @@
+.address {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	&__title {
+		font-size: 14px;
+		font-family: "Acrom";
+		color: rgb(146, 146, 146);
+		margin: 0;
+	}
+	& span {
+		font-size: 14px;
+		font-family: "Acrom";
+		color: rgb(146, 146, 146);
+		line-height: 28px;
+	}
+}

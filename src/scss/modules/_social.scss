@@ -1,16 +1,26 @@
 /* ---КОМПОНЕНТ ССЫЛКИ НА СОЦСЕТИ--- */
-.social{
+.social {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	&__link{
+	&__link {
 		position: relative;
-		width: 20px;
-		height: 20px;
-		padding: 7px;
-		& img{
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25px;
+		height: 25px;
+		margin: 7px;
+		& img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@include tablets {
+			width: 20px;
+			height: 20px;
 		}
 	}
 }

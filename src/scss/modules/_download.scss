@@ -4,6 +4,7 @@
 	flex-direction: column;
 
 	&__item {
+		margin: 10px 0;
 		& a {
 			position: relative;
 			display: flex;
@@ -15,23 +16,25 @@
 		& img {
 			position: relative;
 			width: 22px;
-			margin-right: 10px;
+			margin-right: 15px;
 		}
 
 		& .download__text {
 			position: relative;
+			font-size: 14px;
+			font-family: "Acrom";
+			line-height: 24px;
 			&:after {
 				position: absolute;
-				content: '';
+				content: "";
 				left: 0;
 				bottom: 0;
 				height: 1px;
 				width: 100%;
 
-				transition: all .4s;
+				transition: all 0.4s;
 			}
 		}
-
 	}
 
 	&__windows {

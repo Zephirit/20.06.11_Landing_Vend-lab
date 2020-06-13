@@ -25,6 +25,7 @@
 		align-items: center;
 		@include tablets{
 			justify-content: flex-start;
+			height: 80px;	
 		}
 		
 	}
@@ -37,6 +38,7 @@
 		align-items: center;
 		@include tablets{
 			justify-content: flex-end;
+			height: 80px;	
 		}
 	}
 	&__logo {
@@ -52,6 +54,8 @@
 		}
 		@include tablets{
 			margin-right: 12px;
+			width: 140px;
+			height: 80px;
 		}
 	}
 
@@ -109,7 +113,7 @@
 	&__burger {
 		position: relative;
 		justify-self: flex-end;
-
+		margin-left: 20px;
 		order: 10;
 
 		@include desktop {

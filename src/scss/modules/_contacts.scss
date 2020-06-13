@@ -5,33 +5,28 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-
-	&__link {
-		position: relative;
-		width: 20px;
-		height: 20px;
-		padding: 7px;
-
-		& img {}
-	}
-
+	white-space: nowrap;
+	height: 65px;
 	&__phone {
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 65px;
+		
 
 		order: 3;
 
 		& a {
+			font-family: "Circe";
+			color: rgb(34, 34, 34);
+			font-weight: bold;
 			text-decoration: none;
-			font-size: 18px;
+			font-size: 23px;
 			color: $mainColor;
 		}
 
 
 		@include tablets {
-			margin-right: 20px;
+			margin-right: 10px;
 			margin-left: auto;
 		}
 	}
@@ -40,15 +35,15 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		height: 65px;
 		order: 4;
-
 		@include tablets {
 			margin-right: 40px;
 		}
 	}
 
 	&--footer {
+		justify-content: flex-start;
+		height: 55px;
 		& a {
 			color: $backColor;
 		}

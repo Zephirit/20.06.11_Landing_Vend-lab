@@ -1,0 +1,32 @@
+.access {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 10px 10px 0;
+	&__politic {
+		position: relative;
+		font-size: 14px;
+		font-family: "Acrom";
+		line-height: 24px;
+		&:after {
+			position: absolute;
+			content: "";
+			left: 0;
+			bottom: 0;
+			height: 1px;
+			width: 100%;
+			transition: all 0.4s;
+		}
+	}
+	&__created {
+		position: relative;
+		font-size: 14px;
+		font-family: "Acrom";
+		line-height: 24px;
+		display: none;
+		@include tablets {
+			display: block;
+		}
+	}
+}

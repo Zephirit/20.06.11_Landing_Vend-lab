@@ -18,7 +18,7 @@ footer{
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		margin: 0 15px;
+		margin: 35px 15px 0;
 		@include tablets{
 			flex-direction: row;
 		}
@@ -34,5 +34,35 @@ footer{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	&__logo {
+		position: relative;
+		width: 145px;
+		height: 65px;
+		display: flex;
+		align-items: center;
+
+		& img {
+			width: 100%;
+		}
+		@include tablets{
+			margin-right: 12px;
+			width: 140px;
+			height: 80px;
+		}
+	}
+	&__contacts{
+		position: relative;
+		margin-bottom: 2px;
+	}
+	&__address{
+		position: relative;
+		margin-bottom: 10px;
+	}
+	&__download{
+		position: relative;
+	}
+	&__access{
+		position: relative;
 	}
 }
