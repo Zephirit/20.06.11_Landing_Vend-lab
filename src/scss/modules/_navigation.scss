@@ -1,6 +1,6 @@
 /* ---КОМПОНЕНТ МЕНЮ НАВИГАЦИИ--- */
 .navigation {
-	position: absolute;
+	position: fixed;
 	z-index: 999;
 	right: 0;
 	top: 135px;
@@ -12,35 +12,37 @@
 	font-family: "Acrom";
 	font-size: 16px;
 	transform: translate3d(110%, 0, 0);
-	transition: transform .4s;
-	&__content{
+	transition: transform 0.4s;
+	&__content {
 		position: relative;
 		width: auto;
 		display: flex;
 		flex-direction: column;
-	@include desktop{
-		width: 1170px;
-		margin: auto;
+		@include desktop {
+			width: 1170px;
+			margin: auto;
+		}
 	}
-	}
-	@include tablets{
+	@include tablets {
 		top: 0;
 		height: 100%;
 	}
-	@include desktop{
-		position: relative;
+	@include desktop {
+		width: 100%;
+		top: 80px;
+		height: 55px;
 		display: flex;
 		transform: translate3d(0%, 0, 0);
-		
+
 		// &--botline{
 		// 	display: none;
 		// }
-		& .navigation__list{
+		& .navlist {
 			flex-direction: row;
 			justify-content: space-between;
 		}
 	}
-	&__close{
+	&__close {
 		position: relative;
 		cursor: pointer;
 		display: flex;
@@ -51,32 +53,50 @@
 		width: 20px;
 		height: 20px;
 		color: $mainColor;
-		transition: color .4s;
-		&:hover{
+		transition: color 0.4s;
+		&:hover {
 			color: $contrColor;
 		}
 	}
 	&--botline {
 		&:after {
-			content: '';
+			content: "";
 			@include centered(x);
 			bottom: 0;
 			height: 1px;
 			width: 100%;
-			background: rgba($mainColor, .2);
+			background: rgba($mainColor, 0.2);
 		}
 	}
 
 	@include tablets {
 		display: flex;
-
 	}
 
 	&.active {
 		display: flex;
 		transform: translate3d(0%, 0, 0);
-		& ~ .section{
-			filter: contrast(.1);
+		& ~ .content {
+			filter: contrast(0.05);
+			@include desktop {
+				filter: none;
+			}
+		}
+		& ~ .footer {
+			@include tablets {
+				filter: contrast(0.05);
+				@include desktop {
+					filter: none;
+				}
+			}
+		}
+		& ~ .header {
+			@include tablets {
+				filter: contrast(0.05);
+				@include desktop {
+					filter: none;
+				}
+			}
 		}
 	}
 
@@ -105,7 +125,7 @@
 			text-align: center;
 			margin-right: 20px;
 		}
-		@include desktop{
+		@include desktop {
 			display: none;
 		}
 	}
@@ -114,8 +134,8 @@
 		position: relative;
 		cursor: pointer;
 		padding: 15px 20px;
-		
-		@include desktop{
+
+		@include desktop {
 			display: none;
 		}
 	}
@@ -124,7 +144,7 @@
 		position: relative;
 		cursor: pointer;
 		padding: 15px 20px;
-		@include desktop{
+		@include desktop {
 			padding: 15px 0;
 		}
 	}

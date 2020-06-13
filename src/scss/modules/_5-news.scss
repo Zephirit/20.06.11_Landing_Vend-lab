@@ -1,5 +1,6 @@
 /* ---СЕКЦИЯ NEWS--- */
 .news{
+	order: 30;
 	&__title{
 		font-size: 12px;
 		@include desktop{

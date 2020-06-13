@@ -2,6 +2,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	
 	&__title {
 		font-size: 14px;
 		font-family: "Acrom";
@@ -11,7 +12,26 @@
 	& span {
 		font-size: 14px;
 		font-family: "Acrom";
-		color: rgb(146, 146, 146);
+		color: $backColor;
 		line-height: 28px;
+	}
+	@include tablets{
+		max-width: 210px;
+		margin-left: 5px;
+		& span {
+			line-height: 20px;
+		}
+		&__title {
+			margin-bottom: 5px;
+		}
+	}
+	@include desktop{
+		max-width: 240px;
+		&__title {
+			font-size: 15px;
+		}
+		& span {
+			font-size: 15px;
+		}
 	}
 }

@@ -1,5 +1,6 @@
 /* ---СЕКЦИЯ REVIEWS--- */
 .reviews{
+	order: 25;
 	&__title{
 		font-size: 12px;
 		@include desktop{

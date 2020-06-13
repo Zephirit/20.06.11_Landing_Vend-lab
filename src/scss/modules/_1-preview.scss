@@ -1,5 +1,6 @@
 /* ---СЕКЦИЯ PREVIEW--- */
 .preview{
+	order: 10;
 	&__title{
 		font-size: 12px;
 		@include desktop{

@@ -1,36 +1,56 @@
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
-.content{
-	flex: 1 0 auto;
-}
-footer{
+.content {
 	position: relative;
-	background-color: $mainColor;
+	top: 130px;
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+	transition: filter .4s;;
+	@include tablets{
+		top: 80px;
+	}
+	@include desktop{
+		top: 135px;
+	}
+}
+footer {
+	position: relative;
+	background-color: #222222;
 	color: $backColor;
 	flex: 0 0 auto;
 	overflow: hidden;
 }
-.footer{
+.footer {
 	position: relative;
 	display: flex;
 	color: $backColor;
+	transition: filter .4s;
 	&__content {
 		position: relative;
 		width: 100%;
+		max-width: 375px;
 		display: flex;
 		flex-direction: column;
-		margin: 35px 15px 0;
-		@include tablets{
-			flex-direction: row;
+		margin: 35px auto 15px;
+		padding: 0 15px;
+		@include tablets {
+			max-width: none;
+			margin: 25px 15px 15px;
+			padding: 0;
+			padding-bottom: 150px;
 		}
-		@include desktop	{
+		@include desktop {
 			position: relative;
 			width: 1170px;
-			margin: auto;
+			margin: 55px auto;
+			padding-bottom: 75px;
 		}
 	}
-	&__info{
+	&__info {
 		position: relative;
 		width: 100%;
+		max-width: 345px;
+		// margin: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -45,24 +65,119 @@ footer{
 		& img {
 			width: 100%;
 		}
-		@include tablets{
-			margin-right: 12px;
-			width: 140px;
+		@include tablets {
+			// margin-right: 12px;
+			width: 155px;
+			height: 80px;
+		}
+		@include desktop {
+			width: 170px;
 			height: 80px;
 		}
 	}
-	&__contacts{
+	&__contacts {
 		position: relative;
+		display: flex;
+		justify-content: flex-start;
 		margin-bottom: 2px;
+		@include tablets {
+			justify-content: flex-end;
+			margin-top: -40px;
+		}
+		@include desktop {
+			justify-content: flex-start;
+			left: 25%;
+			margin-top: -40px;
+		}
 	}
-	&__address{
+	&__navlist {
+		@include centered(x);
+		display: none;
+		& .navlist__item:first-child {
+			display: none;
+		}
+		@include tablets {
+			display: flex;
+		}
+		@include desktop {
+			left: 0;
+			margin-left: 55%;
+			transform: none;
+		}
+	}
+	&__address {
 		position: relative;
 		margin-bottom: 10px;
+		@include tablets {
+			margin-top: -10px;
+		}
+		@include desktop {
+			margin-left: 25%;
+			margin-top: 5px;
+		}
 	}
-	&__download{
-		position: relative;
+	&__company {
+		position: absolute;
+		display: none;
+		@include tablets {
+			display: inline;
+			left: 0;
+			top: 210px;
+			margin-left: 5px;
+			font-size: 14px;
+			font-family: "Acrom";
+			color: rgb(145, 145, 145);
+		}
+		@include desktop {
+			top: 95px;
+			margin-left: 0;
+			font-size: 15px;
+		}
 	}
-	&__access{
+
+	&__download {
 		position: relative;
+		display: flex;
+		justify-content: flex-start;
+
+		@include tablets {
+			justify-content: flex-end;
+			margin-top: -40px;
+		}
+		@include desktop {
+			position: absolute;
+			top: 55px;
+			right: 0;
+		}
+	}
+	&__access {
+		position: relative;
+
+		height: 75px;
+		@include tablets {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 75px;
+			&::before {
+				@include centered(x);
+				top: 0;
+				width: calc(25px + 100%);
+				height: 1px;
+				content: "";
+				background: #313131;
+			}
+		}
+		@include desktop{
+			position: absolute;
+			top: 180px;
+			width: 47.5%;
+			&::before {
+				display: none;
+			}
+		}
 	}
 }

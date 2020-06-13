@@ -1,8 +1,12 @@
 /* ---HEADER--- */
 .header {
-	position: relative;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
 	flex: 1 0 auto;
-
+	background: $backColor;
+	order: 1;
+	transition: filter .4s;
 	&__content {
 		display: flex;
 		flex-direction: column;

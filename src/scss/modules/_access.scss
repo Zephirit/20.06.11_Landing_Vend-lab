@@ -2,8 +2,9 @@
 	position: relative;
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
-	margin: 10px 10px 10px 0;
+	justify-content: flex-start;
+	margin: 7px 0 7px 37px;
+
 	&__politic {
 		position: relative;
 		font-size: 14px;
@@ -16,6 +17,7 @@
 			bottom: 0;
 			height: 1px;
 			width: 100%;
+			background: #313131;
 			transition: all 0.4s;
 		}
 	}
@@ -23,10 +25,27 @@
 		position: relative;
 		font-size: 14px;
 		font-family: "Acrom";
+		color: rgb(109, 193, 244);
 		line-height: 24px;
 		display: none;
 		@include tablets {
 			display: block;
 		}
 	}
+	
+	@include tablets{
+		margin: auto;
+		justify-content: space-between;
+	}
+	@include desktop{
+		&__politic {
+			order: 2;
+			font-size: 15px;
+		}
+		&__created {
+			order: 1;
+			font-size: 15px;
+		}
+	}
 }
+

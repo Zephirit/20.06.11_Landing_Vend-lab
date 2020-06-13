@@ -11,7 +11,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		
+		margin-right: 5px;
 
 		order: 3;
 
@@ -23,7 +23,6 @@
 			font-size: 23px;
 			color: $mainColor;
 		}
-
 
 		@include tablets {
 			margin-right: 10px;
@@ -44,9 +43,36 @@
 	&--footer {
 		justify-content: flex-start;
 		height: 55px;
+		width: 100%;
 		& a {
 			color: $backColor;
 		}
+		@include tablets {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-end;
+			margin: 0 30px;
+			max-width: 175px;
+			& .social{
+				margin-left: -7px;
+			}
+			& .contacts__phone {
+				margin: 0;
+			}
+			& .contacts__social {
+				margin: 0;
+			}
+		}
+		@include desktop {
+			margin: 0 5px;
+			& .contacts__tophone {
+				font-size: 27px;
+			}
+			& .social__link{
+				width: 25px;
+				height: 25px;
 
+			}
+		}
 	}
 }
