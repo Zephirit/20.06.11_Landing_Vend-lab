@@ -1,16 +1,16 @@
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
 .content {
 	position: relative;
-	top: 130px;
+	padding-top: 130px;
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
 	transition: filter .4s;;
 	@include tablets{
-		top: 80px;
+		padding-top: 80px;
 	}
 	@include desktop{
-		top: 135px;
+		padding-top: 135px;
 	}
 }
 footer {

@@ -6,12 +6,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: $subColor;
-	padding: 10px 0;
 	transition: filter .4s;
-	&:nth-child(2n){
-		background: $contrColor;
-	}
 	&__title{
 		text-transform: uppercase;
 	}

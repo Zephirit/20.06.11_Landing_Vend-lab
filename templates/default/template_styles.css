@@ -128,13 +128,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1e2d59;
-  padding: 10px 0;
   transition: filter .4s;
-}
-
-.section:nth-child(2n) {
-  background: #00c2f6;
 }
 
 .section__title {
@@ -143,23 +137,217 @@ ul {
 
 /* ---СЕКЦИЯ PREVIEW--- */
 .preview {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle farthest-corner at 120% 60%, #62daff, #1a3f6c);
   order: 10;
+  overflow: hidden;
 }
 
-.preview__title {
-  font-size: 12px;
-}
-
-@media (min-width: 1170px) {
-  .preview__title {
-    font-size: 20px;
-  }
+.preview__slider {
+  position: relative;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
-  .preview__title {
-    font-size: 16px;
+  .preview__slider {
+    width: 716px;
+    margin: auto;
   }
+}
+
+@media (min-width: 1170px) {
+  .preview__slider {
+    width: 1170px;
+    margin: auto;
+  }
+}
+
+.previewSlick {
+  position: relative;
+  width: 100%;
+}
+
+.previewFree {
+  position: relative;
+  width: 100%;
+}
+
+.previewFree__content {
+  position: relative;
+  padding: 210px 15px 85px;
+}
+
+.previewFree__bg {
+  position: absolute;
+  margin-top: -110px;
+  margin-left: -10px;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .previewFree__bg {
+    margin-top: -170px;
+    margin-left: auto;
+    margin-right: -170px;
+    width: 560px;
+    height: 560px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .previewFree__bg {
+    margin-top: -260px;
+    margin-left: auto;
+    margin-right: -365px;
+    width: 860px;
+    height: 860px;
+  }
+}
+
+.previewFree img {
+  position: absolute;
+  transform: scale(-1, 1);
+  height: 70%;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .previewFree img {
+    transform: scale(1, 1);
+  }
+}
+
+.previewFree svg {
+  position: absolute;
+  z-index: 10;
+  fill: white;
+  width: 65%;
+  bottom: 16%;
+  left: 0;
+  margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+  .previewFree svg {
+    left: auto;
+    right: 0;
+  }
+}
+
+.previewFree__title {
+  position: relative;
+  font-size: 30px;
+  font-family: "Circe";
+  color: white;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.previewFree__title strong {
+  font-weight: bold;
+  color: #00c2f6;
+}
+
+.previewFree__subtitle {
+  position: relative;
+  font-size: 15px;
+  font-family: "Acrom";
+  color: white;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.previewFree__subtitle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: white;
+}
+
+.previewFree__more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  transition: all .4s;
+}
+
+.previewFree__more img {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.previewFree__more span {
+  font-size: 14px;
+  padding-left: 10px;
+  font-family: "Acrom";
+  color: white;
+}
+
+.previewFree__more svg {
+  position: relative;
+  padding: 5px 0 0;
+  width: 10px;
+  fill: none;
+  stroke: white;
+  stroke-width: 3px;
+  transform: scale(1, 1);
+  transition: transform .4s;
+}
+
+.previewFree__more.active {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.previewFree__more.active svg {
+  transform: scale(1, -1);
+}
+
+.previewFree__more.active ~ .previewFree__text {
+  display: block;
+  opacity: 1;
+  top: 0;
+}
+
+.previewFree__text {
+  position: relative;
+  top: -100px;
+  display: none;
+  opacity: 0;
+  font-size: 13px;
+  font-family: "Acrom";
+  color: white;
+  margin-bottom: 10px;
+  transition: all .4s;
+}
+
+.previewFree__get {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Acrom";
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  border-width: 1px;
+  border-color: #00c2f6;
+  border-style: solid;
+  border-radius: 4px;
+  width: 343px;
+  height: 44px;
 }
 
 /* ---СЕКЦИЯ ADVANTAGESS--- */
@@ -875,6 +1063,68 @@ ul {
   }
 }
 
+.slick-arrow {
+  position: absolute;
+  display: none !important;
+  z-index: 20;
+  width: 100%;
+  bottom: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .slick-arrow {
+    display: block;
+  }
+}
+
+.slick-list {
+  overflow: visible;
+  outline: none;
+  border: none;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+  transform: scale(-1, 1);
+}
+
+.slick-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 23px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dots button {
+  display: none;
+}
+
+.slick-dots li {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 0px solid white;
+  margin: 0 15px;
+  padding: 2px;
+  transition: all 0.4s;
+}
+
+.slick-dots li.slick-active {
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  border: 2px solid white;
+}
+
 /* ---КОМПОНЕНТ МЕНЮ НАВИГАЦИИ--- */
 .navigation {
   position: fixed;
@@ -1554,7 +1804,7 @@ ul {
 /* ---ПОДВАЛ СТРАНИЦЫ--- */
 .content {
   position: relative;
-  top: 130px;
+  padding-top: 130px;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -1563,13 +1813,13 @@ ul {
 
 @media (min-width: 768px) {
   .content {
-    top: 80px;
+    padding-top: 80px;
   }
 }
 
 @media (min-width: 1170px) {
   .content {
-    top: 135px;
+    padding-top: 135px;
   }
 }
 
