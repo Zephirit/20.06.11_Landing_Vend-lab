@@ -98,7 +98,7 @@
 				position: absolute;
 				display: block;
 				content: '';
-				bottom: 0;
+				bottom: 1px;
 				left: 35px;
 				height: 2px;
 				width: 60px;
@@ -112,6 +112,13 @@
 		height: 56px;
 		width: 56px;
 		margin-right: 22px;
+		& img {
+			@include tablets {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			}
+		}
 	}
 	&__text {
 		position: relative;

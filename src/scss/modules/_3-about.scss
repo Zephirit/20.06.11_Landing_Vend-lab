@@ -15,7 +15,7 @@
 			height: auto;
 		}
 		@include desktop {
-			height: 1000px;
+			height: auto;
 			align-items: center;
 		}
 	
@@ -23,8 +23,7 @@
 		position: relative;
 		display: block;
 		width: 100%;
-		margin: 55px 0 0 15px;
-		padding-bottom: 23px;
+		padding-bottom: 19px;
 		font-size: 30px;
 		font-weight: 700;
 		&::after {
@@ -36,6 +35,9 @@
 			height: 3px;
 			width: 45px;
 			background-color: $mainColor;
+			@include tablets {
+				width: 55px;
+			}
 			@include desktop {
 				@include centered(x)
 				width: 60px;
@@ -46,42 +48,51 @@
 		}
 		@include desktop {
 			width: auto;
-			margin: 55px 0 0;
+			margin: 44px 0 50px;
+			font-size: 46px;
+			padding-bottom: 13px;
 		}
 	}
 	&__content {
 		position: relative;
 		height: 100%;
-		width: auto;
-		display: flex;		
+		width: 100%;
+		max-width: 600px;
+		display: flex;
+		padding: 0 15px;
+		margin: 55px 0;
+		flex-direction: column;		
 		justify-content: center;
 		align-items: center;
+		
 		@include tablets {
-			width: calc(100% - 180px);	
+			width: calc(100% - 180px);
+			max-width: none;	
 		}
 		
 		@include desktop {
 			width: 1170px;
+			margin: 0;
 			padding: 0;
 			z-index: 5;
+			// max-width: 600px;
 		}		
 	}
 	&__items {
 		position: relative;
 		height: 100%;
 		width: 100%;
-		max-width: 600px;
+		// max-width: 600px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin: 33px 15px 60px;
 		@include tablets {
 			flex-direction: column;
 			justify-content: center;
-			margin: 45px 0 80px 20px;
+			margin: 25px 0 30px;
 			height: auto;
 			width: auto;
-			max-width: none;
+			// max-width: none;
 		}
 		@include desktop {
 			flex-direction: row;
@@ -89,7 +100,7 @@
 			max-width: 1170px;
 			height: auto;
 			flex-wrap: wrap;
-			margin: 30px 0;
+			margin: 68px 0;
 		}
 		
 	}
@@ -107,11 +118,13 @@
 			flex-direction: row;
 			align-items: flex-start;
 			justify-content: flex-start;
+			min-height: 140px;
 		}
 		@include desktop {
 			width: 370px;
 			// box-shadow: 5px 5px 20px rgba(black,.1);
 			padding: 0;
+			margin: 12px 0 34px;
 		}
 		&:nth-child(1) {
 			margin-right: 100px;
@@ -122,7 +135,7 @@
 				order: 1;
 				.about__point {
 					transform: rotateY(180deg);
-					left: -140px;
+					left: -150px;
 				}
 			}
 		}	
@@ -130,7 +143,7 @@
 			@include desktop {
 				.about__point {
 					transform: rotateY(180deg);
-					left: -140px;
+					left: -150px;
 				}
 			}
 		}
@@ -151,7 +164,7 @@
 			display: flex;
 			align-items: flex-end;
 			width: 285px;
-			right: -140px;
+			right: -150px;
 			// justify-content: flex-end;
 			// align-items: flex-end;
 		}
@@ -184,7 +197,7 @@
 			background: linear-gradient(to left, $subColor, $contrColor 70%);
 		}
 		@include desktop {
-			width: 255px;
+			width: 262px;
 			left: auto;
 			background: linear-gradient(to right, $subColor, $contrColor 70%);
 		}
@@ -213,13 +226,13 @@
 	&__img {
 		position: relative;
 		align-self: flex-start;
-		// height: 56px;
-		// width: 56px;
 		margin-right: 22px;
 		@include desktop {
 			margin: 0;
 			align-self: center;
-			margin-bottom: 20px;
+			margin-bottom: 5px;
+			height: 56px;
+			width: 56px;
 		}
 	}
 	&__text {
@@ -235,7 +248,7 @@
 		margin: 0;
 		font-size: 20px;
 		@include desktop {
-			// font-size: 24px;
+			// margin-bottom: 13px;
 		}	
 	}
 	&__desc {
@@ -247,12 +260,12 @@
 		line-height: 22px;
 		margin: 15px 0 0;
 		@include tablets {
-			max-width: 600px;
+			// max-width: 600px;
 			}
 		@include desktop {
 			font-size: 14px;
-			line-height: 24px;
-			margin: 18px 0 0;
+			line-height: 23px;
+			margin: 5px 0 0;
 			text-align: center;
 		}
 	}
@@ -269,6 +282,11 @@
 	}
 	&__image {
 		display: none;
+		img {
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+		}
 		@include tablets {
 			position: absolute;
 			display: flex;
@@ -278,19 +296,13 @@
 			width: 520px;
 			// transform: scale(1.4);
 			right: -315px;
-			top: 100px;
-
-		}
-		img {
-			height: 100%;
-			width: 100%;
-			z-index: 1;
+			top: 125px;
 		}
 		@include desktop {
 			@include centered;
-			height: 680px;
-			width: 415px;
-			top: 56%;
+			height: 660px;
+			width: 400px;
+			top: 57%;
 			z-index: 1;
 		}
 	}
@@ -307,7 +319,7 @@
 		@include desktop {
 			height: 50px;
 			width: 165px;
-			top: 42%;
+			top: 45%;
 
 		}
 
@@ -326,6 +338,7 @@
 		@include desktop {
 			font-size: 20px;
 			top: 45%;
+			line-height: 24px;
 		}
 	}
 	&__start {
@@ -336,9 +349,9 @@
 			justify-content: center;
 			align-items: center;
 			z-index: 10;
-			bottom: 200px;
-			width: 195px;
-			height: 45px;
+			bottom: 148px;
+			width: 198px;
+			height: 48px;
 			border-radius: 5px;
 			border: 1px solid $backColor;
 			color: $backColor;

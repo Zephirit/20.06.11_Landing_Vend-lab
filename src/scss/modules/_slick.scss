@@ -8,7 +8,10 @@
 		width: 20px;
 		height: 20px;
 		@include tablets {
-			display: block;
+			display: block !important;
+		}
+		@include desktop {
+			bottom: 50px;
 		}
 	}
 	&-list {
@@ -18,10 +21,16 @@
 	}
 	&-prev {
 		left: 0;
+		@include desktop {
+			left: calc(50% - 250px);
+		}
 	}
 	&-next {
 		right: 0;
 		transform: scale(-1, 1);
+		@include desktop {
+			right: calc(50% - 250px);
+		}
 	}
 	&-dots {
 		position: absolute;
@@ -29,6 +38,9 @@
 		bottom: 23px;
 		display: flex;
 		justify-content: center;
+		@include desktop {
+			bottom: 45px;
+		}
 		& button {
 			display: none;
 		}
@@ -42,6 +54,9 @@
 			margin: 0 15px;
 			padding: 2px;
 			transition: all 0.4s;
+			@include desktop {
+				margin: 0 20px;
+			}
 			&.slick-active {
 				width: 13px;
 				height: 13px;

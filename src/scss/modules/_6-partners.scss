@@ -1,13 +1,83 @@
 /* ---СЕКЦИЯ PARTNERS--- */
 .partners{
+	position: relative;
+	width: 100%;
+	background: #f9f9f9;
+	@include desktop {
+		// position: absolute;
+		background: none;
+		bottom: -65px;
+		z-index: 10;
+	}
+
+	
 	order: 35;
-	&__title{
-		font-size: 12px;
-		@include desktop{
-			font-size: 20px;
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;		
+		height: 90px;
+		width: 100%;
+		padding: 0 15px;
+		overflow: hidden;
+		@include desktop {
+			width: 1170px;
+			height: 130px;
+			background: #f9f9f9;
+			padding: 0 30px;
 		}
-		@include tablets{
-			font-size: 16px;
+		// background: rgba($mainColor,.2);
+
+	}
+	&__button {
+		position: relative;
+		height: auto;
+		&:last-child {
+			transform: scale(-1,1);
+		}
+	}
+	&__items {
+		position: relative;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: auto;
+		@include tablets {
+			max-width: 970px;
+		}
+		@include desktop {
+			max-width: none;
+		}
+	}
+}
+.partner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: 100%;
+	margin: 0 10px;
+	@include tablets {
+		margin: 0 24px;
+	}
+	@include desktop {
+		margin: 0 20px;
+	}
+
+	&__logo {
+		width: 115px;
+		height: 30px;
+		& img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+		@include desktop {
+			width: 170px;
+
 		}
 	}
 }

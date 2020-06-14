@@ -8,152 +8,216 @@
 	&__slider {
 		position: relative;
 		width: 100%;
-		@include tablets{
-			width: 716px;
+		@include tablets {
+			width: 728px;
 			margin: auto;
 		}
-		@include desktop{
+		@include desktop {
 			width: 1170px;
 			margin: auto;
-		}
-	}
-	&Slick {
-		position: relative;
-		width: 100%;
-		
-		&__item {
 		}
 	}
 	&Free {
 		position: relative;
 		width: 100%;
-		&__content{
+		&__content {
 			position: relative;
 			padding: 210px 15px 85px;
-		}
-		&Img{
 			
+			@include tablets {
+				padding: 70px 0 115px;
+			}
+			@include desktop {
+				padding: 125px 0 140px;
+			}
+		}
+		&Img {
 		}
 		&__bg {
 			position: absolute;
-			margin-top: -110px;
-			margin-left: -10px;
+			display: none;
+			top: -110px;
+			left: -10px;
 			width: 290px;
 			height: 290px;
 			border-radius: 50%;
 			overflow: hidden;
+			opacity: 0;
+			transition: opacity 0.4s;
 			@include tablets {
-				margin-top: -170px;
-				margin-left: auto;
-				margin-right: -170px;
+				top: -170px;
+				left: auto;
+				right: -190px;
 				width: 560px;
 				height: 560px;
 			}
 			@include desktop {
-				margin-top: -260px;
-				margin-left: auto;
-				margin-right: -365px;
+				top: -270px;
+				left: auto;
+				right: -365px;
 				width: 860px;
 				height: 860px;
 			}
-		}
-		& img {
-			position: absolute;
-			transform: scale(-1, 1);
-			height: 70%;
-			bottom: 0;
-			left: 0;
-			@include tablets {
-				transform: scale(1, 1);
+			& img {
+				position: absolute;
+				transform: scale(-1, 1);
+				height: 70%;
+				bottom: 0;
+				left: 0;
+				@include tablets {
+					transform: scale(1, 1);
+				}
+			}
+			& svg {
+				position: absolute;
+				z-index: 10;
+				fill: white;
+				opacity: 0;
+				// height: 100%;
+				width: 65%;
+				bottom: 16%;
+				left: 0;
+				margin: 0 5px;
+				transition: opacity 0.4s;
+				@include tablets {
+					left: auto;
+					right: 0;
+				}
 			}
 		}
-		& svg {
-			position: absolute;
-			z-index: 10;
-			fill: white;
-			// height: 100%;
-			width: 65%;
-			bottom: 16%;
-			left: 0;
-			margin: 0 5px;
-			@include tablets {
-				left: auto;
-				right: 0;
-			}
-		}
-		
-		&__title{
+
+		&__title {
 			position: relative;
 			font-size: 30px;
 			font-family: "Circe";
 			color: $backColor;
-			font-weight: bold;
+			font-weight: 300;
 			line-height: 1.1;
 			margin-bottom: 25px;
-			& strong{
+			opacity: 0;
+			transition: opacity 0.4s;
+			& strong {
 				font-weight: bold;
 				color: rgb(0, 194, 246);
 			}
+			@include tablets {
+				width: 50%;
+				font-size: 35px;
+				& strong {
+					color: $contrColor;
+				}
+			}
+			@include desktop {
+				font-weight: 300;
+				width: 60%;
+				font-size: 46px;
+				& strong {
+					font-size: 48px;
+					font-weight: bold;
+					color: rgb(0, 194, 246);
+				}
+			}
 		}
-		&__subtitle{
+
+		&__subtitle {
 			position: relative;
 			font-size: 15px;
 			font-family: "Acrom";
 			color: $backColor;
 			margin-bottom: 20px;
-			padding-left:  15px;
-			&:before{
-				content: '';
+			padding-left: 15px;
+			opacity: 0;
+			transition: opacity 0.4s;
+			&:before {
+				content: "";
 				@include centered(y);
 				left: 0;
 				height: 100%;
 				width: 1px;
 				background: white;
 			}
+			@include tablets {
+				margin-bottom: 30px;
+				width: 50%;
+			}
+			@include desktop {
+				font-size: 16px;
+				padding-left: 25px;
+				margin-bottom: 30px;
+				width: 35%;
+			}
 		}
-		
-		&__more{
+
+		&__more {
 			position: relative;
 			display: flex;
 			align-items: center;
 			margin-bottom: 35px;
-			transition: all .4s;
-			& img{
+			opacity: 0;
+			transition: all 0.4s;
+			& img {
 				position: relative;
 				height: 15px;
 				width: 15px;
 			}
-			& span{
+			& span {
 				font-size: 14px;
-				padding-left: 10px;
 				font-family: "Acrom";
 				color: rgb(255, 255, 255);
+				margin-left: 5px;
+				@include desktop {
+					display: none;
+				}
 			}
-			& svg{
+			& svg {
 				position: relative;
 				padding: 5px 0 0;
+				margin-left: 5px;
 				width: 10px;
 				fill: none;
 				stroke: white;
 				stroke-width: 3px;
-				transform: scale(1,1);
-				transition: transform .4s;
-			}
-			&.active{
-				display: flex;
-				margin-bottom: 5px;
-				& svg{
-					transform: scale(1,-1);
+				transform: scale(1, 1);
+				transition: transform 0.4s;
+				@include desktop {
+					display: none;
 				}
-				& ~ .previewFree__text{
+			}
+			@include tablets {
+				margin-bottom: 45px;
+				max-width: 50%;
+			}
+			@include desktop {
+				margin-bottom: 75px;
+				max-width: 55%;
+			}
+			&.active {
+				display: flex;
+				margin-bottom: 100px;
+				transition: all .4s;
+				@include tablets {
+					margin-bottom: 75px;
+					max-width: 60%;
+				}
+				@include desktop {
+					margin-bottom: 75px;
+					max-width: 55%;
+				}
+				& svg {
+					transform: scale(1, -1);
+				}
+				& .previewFree__text {
 					display: block;
 					opacity: 1;
-					top: 0;
+					top: 25px;
+					@include desktop{
+						top: 0;
+					}
 				}
 			}
 		}
-		&__text{
-			position: relative;
+		&__text {
+			position: absolute;
 			top: -100px;
 			display: none;
 			opacity: 0;
@@ -161,9 +225,20 @@
 			font-family: "Acrom";
 			color: rgb(255, 255, 255);
 			margin-bottom: 10px;
-			transition: all .4s;
+			padding-left: 10px;
+			opacity: 0;
+			transition: all 0.4s;
+			@include desktop {
+				position: relative;
+				margin-bottom: 0;
+				font-size: 14px;
+				top: 0;
+				opacity: 1;
+				display: inline;
+			}
 		}
-		&__get{
+		
+		&__get {
 			position: relative;
 			margin: auto;
 			text-align: center;
@@ -178,9 +253,64 @@
 			border-radius: 4px;
 			width: 343px;
 			height: 44px;
+			opacity: 0;
+			transition: opacity 0.4s;
+			&:focus {
+				outline: none;
+				box-shadow: inset 0 0 10px $backColor;
+			}
+			@include tablets {
+				width: 260px;
+			}
+			@include desktop {
+				width: 300px;
+				height: 46px;
+			}
+			
 			
 		}
-		
+	}
+	&Slick {
+		position: relative;
+		width: 100%;
 
+		&__item {
+			&:focus{
+				outline: none;
+			}
+			&.slick-active {
+				& .previewFree__bg {
+					opacity: 1;
+					display: block;
+					animation: slideInDown 0.4s 0.4s;
+					transition: opacity 0.4s 0.4s;
+					& svg {
+						opacity: 1;
+						animation: bounceInDown 0.4s 1s;
+						transition: opacity 0.2s 1s;
+					}
+				}
+				& .previewFree__title {
+					opacity: 1;
+					animation: slideInLeft 0.4s 0.2s;
+					transition: opacity 0.4s 0.2s;
+				}
+				& .previewFree__subtitle {
+					opacity: 1;
+					animation: slideInLeft 0.4s 0.4s;
+					transition: opacity 0.4s 0.4s;
+				}
+				& .previewFree__more {
+					opacity: 1;
+					animation: slideInLeft 0.4s 0.5s;
+					transition: opacity 0.4s 0.5s;
+				}
+				& .previewFree__get {
+					opacity: 1;
+					animation: slideInLeft 0.4s 0.7s;
+					transition: opacity 0.4s 0.7s;
+				}
+			}
+		}
 	}
 }
