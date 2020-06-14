@@ -24,3 +24,23 @@ mixin navlist(cl)
 		li.navlist__item Тарифы и цены
 		li.navlist__item Полезная информация
 		li.navlist__item Контакты
+mixin review(cl,name,job,pic,desc)
+	.review(class=cl)
+		.review__content
+			.review__avatar
+				.review__img
+					img(src=`./upload/images/reviews-slider/review-${pic}.jpg`, alt="pic")
+				.review__icon
+					img(src="./templates/default/images/reviews_chat.png", alt="chat")
+			.review__about
+				.review__name=name
+				.review__job=job
+			.review__description
+				.review__quote
+					img(src="./templates/default/images/reviews_quote.png", alt="quote")
+				.review__text=desc
+			.review__all
+				span Все отзывы
+				.review__arrow
+					img(src="./templates/default/images/slider_arrow.png", alt="arrow")
+					

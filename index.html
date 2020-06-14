@@ -88,7 +88,11 @@
                     <div class="previewFreeImg">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 450">
                         <polygon points="297,449 181,449 3,1 146,1 241,257 333,1 477,1 "></polygon>
-                      </svg><img src="./templates/default/images/main_pic_small.jpg" alt="main">
+                      </svg>
+                      <picture>
+                        <source srcset="./templates/default/images/main_pic_large.jpg" media="(min-width: 1200px)">
+                        <source srcset="./templates/default/images/main_pic_medium.jpg" media="(min-width: 768px)"><img src="./templates/default/images/main_pic_small.jpg" alt="main">
+                      </picture>
                     </div>
                   </div>
                   <div class="previewFree__content">
@@ -202,7 +206,68 @@
           <button class="about__start">Начать</button>
         </section>
         <section class="section reviews animated fadeIn">
-          <h2 class="reviews__title">Секция Reviews</h2>
+          <h2 class="reviews__title"> <span>Наши </span><span>Довольные </span><span>клиенты</span></h2>
+          <div class="reviews__slider">
+            <div class="reviewsSlick">
+                  <div class="review">
+                    <div class="review__content">
+                      <div class="review__avatar">
+                        <div class="review__img"><img src="./upload/images/reviews-slider/review-1.jpg" alt="pic"></div>
+                        <div class="review__icon"><img src="./templates/default/images/reviews_chat.png" alt="chat"></div>
+                      </div>
+                      <div class="review__about">
+                        <div class="review__name">Сергей Альковский</div>
+                        <div class="review__job">Коммерческий директор ООО “Кофе и снэки”, 25 автоматов в Москве</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__quote"><img src="./templates/default/images/reviews_quote.png" alt="quote"></div>
+                        <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
+                      </div>
+                      <div class="review__all"><span>Все отзывы</span>
+                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review">
+                    <div class="review__content">
+                      <div class="review__avatar">
+                        <div class="review__img"><img src="./upload/images/reviews-slider/review-2.jpg" alt="pic"></div>
+                        <div class="review__icon"><img src="./templates/default/images/reviews_chat.png" alt="chat"></div>
+                      </div>
+                      <div class="review__about">
+                        <div class="review__name">Сергей Альковский</div>
+                        <div class="review__job">Коммерческий директор ООО “Кофе и снэки”, 25 автоматов в Москве</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__quote"><img src="./templates/default/images/reviews_quote.png" alt="quote"></div>
+                        <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
+                      </div>
+                      <div class="review__all"><span>Все отзывы</span>
+                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review">
+                    <div class="review__content">
+                      <div class="review__avatar">
+                        <div class="review__img"><img src="./upload/images/reviews-slider/review-3.jpg" alt="pic"></div>
+                        <div class="review__icon"><img src="./templates/default/images/reviews_chat.png" alt="chat"></div>
+                      </div>
+                      <div class="review__about">
+                        <div class="review__name">Сергей Альковский</div>
+                        <div class="review__job">Коммерческий директор ООО “Кофе и снэки”, 25 автоматов в Москве</div>
+                      </div>
+                      <div class="review__description">
+                        <div class="review__quote"><img src="./templates/default/images/reviews_quote.png" alt="quote"></div>
+                        <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
+                      </div>
+                      <div class="review__all"><span>Все отзывы</span>
+                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
         </section>
         <section class="section news animated fadeIn">
           <div class="news__content">

@@ -65,15 +65,12 @@
 
 	&__line {
 		@include centered(x);
-		top: 65px;
+		top: 0;
 		height: 1px;
 		width: 100vw;
 		background: rgba($mainColor, .2);
 
 		@include tablets {
-			display: none;
-		}
-		@include phones {
 			display: none;
 		}
 	}

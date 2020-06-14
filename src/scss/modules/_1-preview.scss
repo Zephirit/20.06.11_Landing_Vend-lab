@@ -66,6 +66,10 @@
 				left: 0;
 				@include tablets {
 					transform: scale(1, 1);
+					left: -125px;
+				}
+				@include desktop {
+					left: -170px;
 				}
 			}
 			& svg {
