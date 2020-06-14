@@ -17,8 +17,8 @@ window.onload = () => {
 			nextArrow: "<div class='slick-next'><img src='./templates/default/images/slider_arrow.png' alt='next'></div>",
 			prevArrow: "<div class='slick-prev'><img src='./templates/default/images/slider_arrow.png' alt='prev'></div>",
 			dots: true,
-			fade: true,
-			mobileFirst: true
+			fade: true
+			
 		});
 	}
 	const _reviewsSlider = () => {
@@ -43,6 +43,43 @@ window.onload = () => {
 			})
 		}
 	}
+	const _partnersSlider = () => {
+		$('.partners__items').slick({
+			nextArrow: "<div class='slick-next'><img src='./templates/default/images/partners_arrow.png' alt='next'></div>",
+			prevArrow: "<div class='slick-prev'><img src='./templates/default/images/partners_arrow.png' alt='prev'></div>",
+			infinite: true,
+			speed: 300,
+			centerMode: true,
+			centerPadding: '10px',
+			slidesToShow: 1,
+			mobileFirst: true,
+			responsive: [{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 5,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 375,
+					settings: {
+						slidesToShow: 2
+					}
+				}
+			]
+		})
+	}
 	const _activatePreviewMore = () => {
 		const previewMore = document.querySelector('.previewFree__more')
 		previewMore.addEventListener('click', (e) => {
@@ -56,6 +93,7 @@ window.onload = () => {
 		_previewSlider()
 		_reviewsSlider()
 		_newsSlider()
+		_partnersSlider()
 		_activatePreviewMore()
 	}
 	_init()

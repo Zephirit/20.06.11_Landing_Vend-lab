@@ -28,6 +28,7 @@
 		height: 100%;
 	}
 	@include desktop {
+		position: absolute;
 		width: 100%;
 		top: 80px;
 		height: 55px;
@@ -77,14 +78,16 @@
 		display: flex;
 		transform: translate3d(0%, 0, 0);
 		& ~ .content {
-			filter: contrast(0.05);
+			filter: blur(10px);
+			// animation: hue 10s infinite;
 			@include desktop {
 				filter: none;
 			}
 		}
 		& ~ .footer {
 			@include tablets {
-				filter: contrast(0.05);
+				filter: blur(10px);
+				// animation: hue 10s infinite;
 				@include desktop {
 					filter: none;
 				}
@@ -92,7 +95,8 @@
 		}
 		& ~ .header {
 			@include tablets {
-				filter: contrast(0.05);
+				filter: blur(10px);
+				// animation: hue 10s infinite;
 				@include desktop {
 					filter: none;
 				}
