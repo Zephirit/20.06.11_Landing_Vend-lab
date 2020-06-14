@@ -134,6 +134,8 @@
 	}
 	&__quote {
 		position: absolute;
+		width: 20px;
+		height: 20px;
 		top: -30px;
 		left: 0;
 		@include tablets {

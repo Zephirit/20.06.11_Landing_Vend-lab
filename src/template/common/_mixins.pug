@@ -7,7 +7,7 @@ mixin socials
 	.social
 		each contact in ['whatsapp','viber','telegram']
 			a(href="#").social__link.hvr-grow
-				img(src=`./templates/default/images/socials/${contact}.png`, alt=`${contact}`)
+				img(src=`./templates/default/images/socials/${contact}.svg`, alt=`${contact}`)
 mixin contacts(cl)
 	.contacts(class=cl)
 		.contacts__phone.hvr-grow
@@ -37,7 +37,7 @@ mixin review(cl,name,job,pic,desc)
 				.review__job=job
 			.review__description
 				.review__quote
-					img(src="./templates/default/images/reviews_quote.png", alt="quote")
+					img(src="./templates/default/images/reviews_quote.svg", alt="quote")
 				.review__text=desc
 			.review__all
 				span Все отзывы

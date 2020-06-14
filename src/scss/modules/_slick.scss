@@ -7,7 +7,7 @@
 		bottom: 20px;
 		width: 20px;
 		height: 20px;
-		& img{
+		& img {
 			width: 100%;
 		}
 		@include tablets {
@@ -43,6 +43,7 @@
 		bottom: 23px;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		@include desktop {
 			bottom: 45px;
 		}
@@ -137,6 +138,42 @@
 		& .slick-next {
 			top: 25%;
 			right: 0;
+		}
+	}
+}
+.news__items {
+	& .slick-dots {
+		position: absolute;
+		width: 100%;
+		bottom: -25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include desktop {
+			bottom: 45px;
+		}
+		& button {
+			display: none;
+		}
+		& li {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: $mainColor;
+			border: 0px solid $mainColor;
+			margin: 0 15px;
+			padding: 2px;
+			transition: all 0.4s;
+			@include desktop {
+				margin: 0 20px;
+			}
+			&.slick-active {
+				width: 13px;
+				height: 13px;
+				background: transparent;
+				border: 2px solid $mainColor;
+			}
 		}
 	}
 }

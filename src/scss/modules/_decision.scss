@@ -14,7 +14,7 @@
 		left: -12px;
 		width: 1px;
 		height: 75%;
-		background: rgba($mainColor, 0.2);
+		background: #f1f1f1;
 	}
 
 	@include tablets {
@@ -73,7 +73,7 @@
 			left: -15px;
 			width: 1px;
 			height: 100%;
-			background: rgba($backColor, 0.2);
+			background: #f1f1f1;
 		}
 		@include tablets {
 			display: none;

@@ -23,6 +23,7 @@
 		display: flex;
 		width: 100%;
 		padding-bottom: 19px;
+		margin: 0 15px;
 		font-size: 30px;
 		font-weight: 700;
 		&::after {
@@ -42,13 +43,13 @@
 			}
 		}
 		@include tablets {
-			margin: 0;
+			margin: 0 15px;
 			width: auto;
 			font-size: 35px;
 		}
 		@include desktop {
 			width: auto;
-			margin: 0;
+			margin: 0 15px;
 			font-size: 46px;
 			padding-bottom: 13px;
 		}
@@ -57,6 +58,7 @@
 		position: relative;
 		width: 100%;
 		margin-top: 12px;
+		padding: 0 15px;
 		display: flex;
 		font-family: Acrom;
 		font-weight: normal;
@@ -90,8 +92,9 @@
 	}
 	&__content {
 		position: relative;
-		margin: 55px 15px;
-		width: auto;
+		width: 100%;
+		margin: 55px 0 90px;
+		// width: auto;
 		height: auto;
 		display: flex;
 		flex-direction: column;
@@ -99,7 +102,7 @@
 			display: flex;
 			width: 100%;
 			padding: 0 15px;
-			margin: 55px 0;			
+			margin: 55px 0;
 		}
 		@include desktop {
 			width: 1170px;
@@ -116,82 +119,4 @@
 		}
 	}
 }
-.article {
-	position: relative;
-	margin: 30px 0;
-	@include tablets {
-		display: none;
-		width: 32%;
-	}
-	@include desktop {
-		width: 23%;
-	}
-	&:nth-child(1) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(2) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(3) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(4) {
-		@include desktop {
-			display: block;
-		}
-	}
-	
 
-	&__image {
-		position: relative;
-		width: 100%;
-		& img {
-			width: 100%;
-			object-fit: cover;
-			@include tablets {
-				height: 100%;
-			}
-
-		}
-		@include tablets {
-			height: 20vw;
-		}
-		@include desktop {
-			height: 180px;
-		}
-
-
-	}
-	&__name {
-		position: relative;
-		margin: 18px 0;
-		display: inline-block;
-		font-size: 20px;
-		font-weight: 700;
-		// letter-spacing: 1px;
-		&Main {
-			display: inline;
-
-		}
-		&Add {
-			display: inline;
-			@include tablets {
-				display: none;
-			}
-		}
-
-	}
-	&__date {
-		position: relative;
-		font-family: Acrom;
-		font-size: 13px;
-		font-weight: 300;
-
-	}
-}
