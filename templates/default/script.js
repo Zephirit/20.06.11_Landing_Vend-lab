@@ -6,6 +6,7 @@ window.onload = () => {
 		burger.addEventListener('click', (e) => {
 			e.preventDefault()
 			navigation.classList.toggle('active')
+			burger.classList.toggle('active')
 		})
 		navClose.addEventListener('click', (e) => {
 			e.preventDefault()

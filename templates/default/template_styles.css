@@ -153,6 +153,7 @@ ul {
   .preview__slider {
     width: 728px;
     margin: auto;
+    padding-bottom: 10px;
   }
 }
 
@@ -160,6 +161,7 @@ ul {
   .preview__slider {
     width: 1170px;
     margin: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -878,7 +880,7 @@ ul {
     max-width: 1170px;
     height: auto;
     flex-wrap: wrap;
-    margin: 68px 0;
+    margin: 64px 0;
   }
 }
 
@@ -1665,7 +1667,7 @@ ul {
 @media (min-width: 1200px) {
   .news__title {
     width: auto;
-    margin: 0 15px;
+    margin: 0;
     font-size: 46px;
     padding-bottom: 13px;
   }
@@ -1705,6 +1707,7 @@ ul {
 @media (min-width: 1200px) {
   .news__all {
     top: 45px;
+    padding: 0;
   }
 }
 
@@ -1736,6 +1739,7 @@ ul {
   .news__content {
     width: 1170px;
     margin: 80px 0 0;
+    padding: 0;
   }
 }
 
@@ -2133,7 +2137,9 @@ ul {
 
 @media (min-width: 1200px) {
   .article {
+    margin: 20px 0;
     width: 23%;
+    padding: 0;
   }
 }
 
@@ -2213,11 +2219,23 @@ ul {
   }
 }
 
+@media (min-width: 1200px) {
+  .article__name {
+    margin: 18px 0 40px;
+  }
+}
+
 .article__date {
   position: relative;
   font-family: Acrom;
   font-size: 13px;
   font-weight: 300;
+}
+
+@media (min-width: 1200px) {
+  .article__date {
+    font-size: 14px;
+  }
 }
 
 /* ---КОМПОНЕНТ МЕНЮ НАВИГАЦИИ--- */
@@ -2262,8 +2280,8 @@ ul {
   .navigation {
     position: absolute;
     width: 100%;
-    top: 80px;
-    height: 55px;
+    top: 90px;
+    height: 60px;
     display: flex;
     transform: translate3d(0%, 0, 0);
   }
@@ -2483,6 +2501,10 @@ ul {
   height: 65px;
 }
 
+.contacts .order {
+  display: none;
+}
+
 .contacts__phone {
   position: relative;
   display: flex;
@@ -2507,6 +2529,12 @@ ul {
   }
 }
 
+@media (min-width: 1200px) {
+  .contacts__phone {
+    margin: 0;
+  }
+}
+
 .contacts__social {
   position: relative;
   display: flex;
@@ -2520,6 +2548,24 @@ ul {
   }
 }
 
+@media (min-width: 1200px) {
+  .contacts__social {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts {
+    max-width: 315px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .contacts .order {
+    display: block;
+    order: 16;
+  }
+}
+
 .contacts--footer {
   justify-content: flex-start;
   height: 55px;
@@ -2528,6 +2574,10 @@ ul {
 
 .contacts--footer a {
   color: white;
+}
+
+.contacts--footer .order {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -2552,6 +2602,9 @@ ul {
 @media (min-width: 1200px) {
   .contacts--footer {
     margin: 0 5px;
+    max-width: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
   .contacts--footer .contacts__tophone {
     font-size: 27px;
@@ -2564,23 +2617,63 @@ ul {
 
 /* ---КОМПОНЕНТ БУРГЕР--- */
 .burger {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0 auto;
   width: 20px;
   height: 20px;
+  position: relative;
 }
 
 .burger__line {
-  position: relative;
+  padding: 0;
   width: 100%;
   height: 3px;
-  background: #101010;
-  border-radius: 1px;
+  background-color: #101010;
+  display: block;
+  border-radius: 1.5px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
 }
 
+.burger .line1 {
+  top: 0;
+}
+
+.burger .line2,
+.burger .line3 {
+  top: calc(50% - 2px);
+}
+
+.burger .line3 {
+  right: 0;
+}
+
+.burger .line4 {
+  bottom: 0;
+}
+
+.burger.active .line1 {
+  transform: rotate(45deg);
+  transform-origin: 10%;
+  width: 150%;
+}
+
+.burger.active .line2 {
+  transform: translateX(-150%);
+  background-color: transparent;
+}
+
+.burger.active .line3 {
+  transform: translateX(150%);
+  background-color: transparent;
+}
+
+.burger.active .line4 {
+  transform-origin: 10%;
+  transform: rotate(-45deg);
+  width: 150%;
+}
+
+/* HAMBURGER 1 */
 /* ---КОМПОНЕНТ РЕШЕНИЯ--- */
 .decision {
   position: relative;
@@ -2627,7 +2720,12 @@ ul {
 @media (min-width: 1200px) {
   .decision {
     display: block;
-    max-width: 220px;
+    max-width: 250px;
+    margin: 30px;
+    font-size: 14px;
+  }
+  .decision:before {
+    left: -20px;
   }
   .decision span:nth-child(1) {
     display: inline;
@@ -2739,6 +2837,7 @@ ul {
 /* ---КОМПОНЕНТ ЗАКАЗЫ--- */
 .order {
   display: flex;
+  cursor: pointer;
   align-items: center;
   color: #00c2f6;
 }
@@ -2752,6 +2851,16 @@ ul {
   width: 15px;
   height: 15px;
   fill: #00c2f6;
+}
+
+@media (min-width: 1200px) {
+  .order {
+    font-size: 18px;
+  }
+  .order img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* ---HEADER--- */
@@ -2801,6 +2910,12 @@ ul {
   }
 }
 
+@media (min-width: 1200px) {
+  .header__info {
+    height: 90px;
+  }
+}
+
 .header__contacts {
   position: relative;
   width: 100%;
@@ -2814,6 +2929,12 @@ ul {
   .header__contacts {
     justify-content: flex-end;
     height: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__contacts {
+    height: 90px;
   }
 }
 
@@ -2838,6 +2959,12 @@ ul {
   }
 }
 
+@media (min-width: 1200px) {
+  .header__logo {
+    width: 170px;
+  }
+}
+
 .header__line {
   position: absolute;
   left: 50%;
@@ -2851,6 +2978,12 @@ ul {
 @media (min-width: 768px) {
   .header__line {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__line {
+    display: block;
   }
 }
 
@@ -2884,6 +3017,8 @@ ul {
 @media (min-width: 1200px) {
   .header__demo {
     display: flex;
+    font-size: 18px;
+    width: 170px;
   }
 }
 
@@ -2924,7 +3059,7 @@ ul {
 
 @media (min-width: 1200px) {
   .content {
-    padding-top: 135px;
+    padding-top: 150px;
   }
 }
 
@@ -3024,7 +3159,7 @@ footer {
   .footer__contacts {
     justify-content: flex-start;
     left: 25%;
-    margin-top: -40px;
+    margin-top: -65px;
   }
 }
 
@@ -3067,7 +3202,7 @@ footer {
 @media (min-width: 1200px) {
   .footer__address {
     margin-left: 25%;
-    margin-top: 5px;
+    margin-top: 30px;
   }
 }
 

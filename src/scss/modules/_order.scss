@@ -1,6 +1,7 @@
 /* ---КОМПОНЕНТ ЗАКАЗЫ--- */
 .order{
 	display: flex;
+	cursor: pointer;
 	align-items: center;
 	color: $contrColor;
 	& span{
@@ -11,5 +12,12 @@
 		width: 15px;
 		height: 15px;
 		fill: $contrColor;
+	}
+	@include desktop{
+		font-size: 18px;
+		& img{
+			width: 20px;
+			height: 20px;
+		}
 	}
 }

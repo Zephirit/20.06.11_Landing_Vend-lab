@@ -7,7 +7,9 @@
 		width: 32%;
 	}
 	@include desktop {
+		margin: 20px 0;
 		width: 23%;
+		padding: 0;
 	}
 	&:nth-child(1) {
 		@include tablets {
@@ -65,11 +67,17 @@
 				display: none;
 			}
 		}
+		@include desktop {
+			margin: 18px 0 40px;
+		}
 	}
 	&__date {
 		position: relative;
 		font-family: Acrom;
 		font-size: 13px;
 		font-weight: 300;
+		@include desktop {
+			font-size: 14px;
+		}
 	}
 }

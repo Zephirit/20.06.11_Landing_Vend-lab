@@ -31,6 +31,9 @@
 			justify-content: flex-start;
 			height: 80px;	
 		}
+		@include desktop{
+			height: 90px;	
+		}
 		
 	}
 	&__contacts{
@@ -43,6 +46,9 @@
 		@include tablets{
 			justify-content: flex-end;
 			height: 80px;	
+		}
+		@include desktop{
+			height: 90px;	
 		}
 	}
 	&__logo {
@@ -61,6 +67,9 @@
 			width: 140px;
 			height: 80px;
 		}
+		@include desktop{
+			width: 170px;
+		}
 	}
 
 	&__line {
@@ -72,6 +81,9 @@
 
 		@include tablets {
 			display: none;
+		}
+		@include tablets {
+			display: block;
 		}
 	}
 
@@ -106,6 +118,8 @@
 
 		@include desktop {
 			display: flex;
+			font-size: 18px;
+			width: 170px;
 		}
 
 	}

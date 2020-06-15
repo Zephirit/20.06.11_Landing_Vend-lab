@@ -7,6 +7,9 @@
 	align-items: center;
 	white-space: nowrap;
 	height: 65px;
+	& .order {
+		display: none;
+	}
 	&__phone {
 		position: relative;
 		display: flex;
@@ -28,6 +31,9 @@
 			margin-right: 10px;
 			margin-left: auto;
 		}
+		@include desktop {
+			margin: 0;
+		}
 	}
 
 	&__social {
@@ -38,8 +44,20 @@
 		@include tablets {
 			margin-right: 40px;
 		}
+		@include desktop {
+			margin-right: 0;
+		}
 	}
+	@include desktop {
+		max-width: 315px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 
+		& .order {
+			display: block;
+			order: 16;
+		}
+	}
 	&--footer {
 		justify-content: flex-start;
 		height: 55px;
@@ -47,13 +65,16 @@
 		& a {
 			color: $backColor;
 		}
+		& .order {
+			display: none;
+		}
 		@include tablets {
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-end;
 			margin: 0 30px;
 			max-width: 175px;
-			& .social{
+			& .social {
 				margin-left: -7px;
 			}
 			& .contacts__phone {
@@ -65,13 +86,15 @@
 		}
 		@include desktop {
 			margin: 0 5px;
+			max-width: none;
+			flex-wrap: nowrap;
+			justify-content: space-between;
 			& .contacts__tophone {
 				font-size: 27px;
 			}
-			& .social__link{
+			& .social__link {
 				width: 25px;
 				height: 25px;
-
 			}
 		}
 	}

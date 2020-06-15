@@ -8,6 +8,10 @@ mixin socials
 		each contact in ['whatsapp','viber','telegram']
 			a(href="#").social__link.hvr-grow
 				img(src=`./templates/default/images/socials/${contact}.svg`, alt=`${contact}`)
+mixin order
+	.order.hvr-grow
+		img(src="./templates/default/images/header/technology.svg", alt="technology")
+		span Заказать звонок
 mixin contacts(cl)
 	.contacts(class=cl)
 		.contacts__phone.hvr-grow
@@ -15,6 +19,7 @@ mixin contacts(cl)
 				span 8 (499) 703-42-17
 		.contacts__social
 			+socials
+		+order
 mixin navlist(cl)
 	ul.navlist(class=cl)
 		li.navlist__item Главная

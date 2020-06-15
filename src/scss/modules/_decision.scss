@@ -41,7 +41,12 @@
 	}
 	@include desktop {
 		display: block;
-		max-width: 220px;
+		max-width: 250px;
+		margin: 30px;
+		font-size: 14px;
+		&:before {
+			left: -20px;
+		}
 		& span {
 			&:nth-child(1) {
 				display: inline;

@@ -10,7 +10,7 @@
 		padding-top: 80px;
 	}
 	@include desktop{
-		padding-top: 135px;
+		padding-top: 150px;
 	}
 }
 footer {
@@ -87,7 +87,7 @@ footer {
 		@include desktop {
 			justify-content: flex-start;
 			left: 25%;
-			margin-top: -40px;
+			margin-top: -65px;
 		}
 	}
 	&__navlist {
@@ -113,7 +113,7 @@ footer {
 		}
 		@include desktop {
 			margin-left: 25%;
-			margin-top: 5px;
+			margin-top: 30px;
 		}
 	}
 	&__company {
