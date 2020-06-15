@@ -1,13 +1,14 @@
 /* ---КОМПОНЕНТ БУРГЕР--- */
 .burger {
 	margin: 0 auto;
+	cursor: pointer;
 	width: 20px;
 	height: 20px;
 	position: relative;
 	&__line {
 		padding: 0;
 		width: 100%;
-		height: 3px;
+		height:10%;
 		background-color: $mainColor;
 		display: block;
 		border-radius: 1.5px;
@@ -20,7 +21,7 @@
 
 	.line2,
 	.line3 {
-		top: calc(50% - 2px);
+		top: calc(50% - 1px);
 	}
 
 	.line3 {

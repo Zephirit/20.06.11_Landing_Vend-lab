@@ -7,6 +7,7 @@
 
 	&__politic {
 		position: relative;
+		cursor: pointer;
 		font-size: 14px;
 		font-family: "Acrom";
 		line-height: 24px;
@@ -20,9 +21,15 @@
 			background: #313131;
 			transition: all 0.4s;
 		}
+		&:hover{
+			&:after{
+				background: #64b3b6;
+			}
+		}
 	}
 	&__created {
 		position: relative;
+		cursor: pointer;
 		font-size: 14px;
 		font-family: "Acrom";
 		color: rgb(109, 193, 244);

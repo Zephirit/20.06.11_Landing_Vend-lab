@@ -1,36 +1,36 @@
 .article {
 	position: relative;
+	// height: 180px;
+	width: 270px;
 	margin: 30px 0;
 	padding: 0 15px;
+	&:focus{
+		outline: none;
+	}
 	@include tablets {
-		display: none;
+		// display: none;
 		width: 32%;
 	}
-	@include desktop {
-		margin: 20px 0;
-		width: 23%;
-		padding: 0;
-	}
-	&:nth-child(1) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(2) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(3) {
-		@include tablets {
-			display: block;
-		}
-	}
-	&:nth-child(4) {
-		@include desktop {
-			display: block;
-		}
-	}
+	// &:nth-child(1) {
+	// 	@include tablets {
+	// 		display: block;
+	// 	}
+	// }
+	// &:nth-child(2) {
+	// 	@include tablets {
+	// 		display: block;
+	// 	}
+	// }
+	// &:nth-child(3) {
+	// 	@include tablets {
+	// 		display: block;
+	// 	}
+	// }
+	// &:nth-child(4) {
+	// 	@include desktop {
+	// 		display: block;
+	// 	}
+	// }
 
 	&__image {
 		position: relative;
@@ -49,6 +49,11 @@
 		}
 		@include desktop {
 			height: 180px;
+			width: 100%;
+			& img {
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 	&__name {

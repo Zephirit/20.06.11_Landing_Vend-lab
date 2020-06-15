@@ -1,0 +1,10 @@
+#popup.popup--closed
+	.popup__bg
+	.popup
+		a(href="#").popup__close +
+		form(method="post" action="./sendCall.php").formCall#formCall
+			h2.formCall__title Заказать звонок
+			input(type="text" placeholder="Ваше имя" name="name" required).formCall__input
+			input(type="tel" placeholder="Номер телефона" name="phone" required).formCall__input
+			input(type="email" placeholder="Почта" name="email" required).formCall__input
+			input(type="submit").formCall__submit

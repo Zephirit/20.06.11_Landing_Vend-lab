@@ -9,12 +9,12 @@ mixin socials
 			a(href="#").social__link.hvr-grow
 				img(src=`./templates/default/images/socials/${contact}.svg`, alt=`${contact}`)
 mixin order
-	.order.hvr-grow
+	.order.popupTrg.hvr-grow
 		img(src="./templates/default/images/header/technology.svg", alt="technology")
 		span Заказать звонок
 mixin contacts(cl)
 	.contacts(class=cl)
-		.contacts__phone.hvr-grow
+		.contacts__phone.hvr-buzz
 			a(href="tel:84997034217").contacts__tophone 
 				span 8 (499) 703-42-17
 		.contacts__social
@@ -22,13 +22,13 @@ mixin contacts(cl)
 		+order
 mixin navlist(cl)
 	ul.navlist(class=cl)
-		li.navlist__item Главная
-		li.navlist__item О компании
-		li.navlist__item Система и компоненты CRM
-		li.navlist__item Вендинг аналитика
-		li.navlist__item Тарифы и цены
-		li.navlist__item Полезная информация
-		li.navlist__item Контакты
+		li.navlist__item.hvr-underline-reveal Главная
+		li.navlist__item.hvr-underline-reveal О компании
+		li.navlist__item.hvr-underline-reveal Система и компоненты CRM
+		li.navlist__item.hvr-underline-reveal Вендинг аналитика
+		li.navlist__item.hvr-underline-reveal Тарифы и цены
+		li.navlist__item.hvr-underline-reveal Полезная информация
+		li.navlist__item.hvr-underline-reveal Контакты
 mixin review(cl,name,job,pic,desc)
 	.review(class=cl)
 		.review__content
@@ -44,8 +44,5 @@ mixin review(cl,name,job,pic,desc)
 				.review__quote
 					img(src="./templates/default/images/reviews_quote.svg", alt="quote")
 				.review__text=desc
-			.review__all
-				span Все отзывы
-				.review__arrow
-					img(src="./templates/default/images/slider_arrow.png", alt="arrow")
+			
 					

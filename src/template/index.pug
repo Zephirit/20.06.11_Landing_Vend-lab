@@ -4,9 +4,10 @@ block variables
 	- var title = "Vend-lab"
 //- Тело блока
 block content
+	include ./templates/_popup
 	include ./templates/_navigation
 	include ./templates/_header
-	.content
+	.content.blur--side.blur--call
 		include ./templates/_1-preview
 		include ./templates/_2-advantages
 		include ./templates/_3-about

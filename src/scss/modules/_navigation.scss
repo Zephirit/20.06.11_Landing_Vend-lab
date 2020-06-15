@@ -1,7 +1,7 @@
 /* ---КОМПОНЕНТ МЕНЮ НАВИГАЦИИ--- */
 .navigation {
 	position: fixed;
-	z-index: 999;
+	z-index: 899;
 	right: 0;
 	top: 135px;
 	height: calc(100% - 135px);
@@ -12,7 +12,7 @@
 	font-family: "Acrom";
 	font-size: 16px;
 	transform: translate3d(110%, 0, 0);
-	transition: transform 0.4s;
+	transition: all 0.4s;
 	&__content {
 		position: relative;
 		width: auto;
@@ -77,29 +77,10 @@
 	&.active {
 		display: flex;
 		transform: translate3d(0%, 0, 0);
-		& ~ .content {
+		& ~ .blur--side {
 			filter: blur(10px);
-			// animation: hue 10s infinite;
 			@include desktop {
 				filter: none;
-			}
-		}
-		& ~ .footer {
-			@include tablets {
-				filter: blur(10px);
-				// animation: hue 10s infinite;
-				@include desktop {
-					filter: none;
-				}
-			}
-		}
-		& ~ .header {
-			@include tablets {
-				filter: blur(10px);
-				// animation: hue 10s infinite;
-				@include desktop {
-					filter: none;
-				}
 			}
 		}
 	}

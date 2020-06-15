@@ -361,9 +361,9 @@
 			font-weight: 700;
 			cursor: pointer;
 			transition: .3s;
-			&:hover {
-				box-shadow: 0 0 5px $mainColor;
-			}
+			// &:hover {
+			// 	box-shadow: 0 0 5px $mainColor;
+			// }
 			&:focus {
 				box-shadow: inset 0 0 10px $backColor;
 				outline: none;

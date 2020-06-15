@@ -18,6 +18,11 @@
 	&__slider {
 		position: relative;
 		width: 100%;
+		@include desktop{
+			width: 1170px;
+			margin: auto;
+			overflow: hidden;
+		}
 	}
 	&__title {
 		position: relative;
@@ -76,6 +81,66 @@
 		}
 		@include desktop{
 			padding-bottom: 160px;
+		}
+	}
+	&__all{
+		@include centered(x);
+		bottom: 30px;
+		display: flex;
+		align-items: center;
+		&Text {
+			position: relative;
+			margin: 0 5px;
+			font-size: 16px;
+			font-family: "Acrom";
+			color: #00c2f6;
+			border-bottom: 1px solid rgba($contrColor,.1);
+			margin-right: 18px;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+				color: #00c2f6;
+			}
+			// & a {
+				// color: $contrColor;
+				
+			// }
+			// &:after{
+			// 	content: '';
+			// 	position: absolute;
+			// 	left: 0;
+			// 	bottom: 0;
+			// 	width: 100%;
+			// 	height: 1px;
+			// 	background: rgb(0, 194, 246);
+			// }
+		}
+		&__image {
+			position: relative;
+			width: 15px;
+			filter: hue-rotate(180deg);
+			transform: scale(-1,1);
+			& img{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		@include tablets {
+			& span {
+				margin: 0 20px;
+			}
+			top: -25px;
+			left: auto;
+			bottom: auto;
+			right: -50px;
+		}
+		@include desktop{
+			bottom: -100px;
+			right: 0;
+			top: auto;
+			bottom: 0;
 		}
 	}
 }

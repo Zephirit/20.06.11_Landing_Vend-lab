@@ -11,66 +11,68 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/ico"><!----------------------------------------------------------------------------->
 <!-- Библиотеки и плагины CSS-->
     <link rel="stylesheet" href="./templates/default/plugins/bootstrap-4.5.0/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="./templates/default/plugins/bootstrap-4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./templates/default/plugins/Magnific-Popup/magnific-popup.css">
     <link rel="stylesheet" href="./templates/default/plugins/slick/slick.css">
     <link rel="stylesheet" href="./templates/default/plugins/animate.min.css">
     <link rel="stylesheet" href="./templates/default/plugins/hover-min.css"><!----------------------------------------------------------------------------->
 <!-- Основной файл стилей -->
-    <link rel="stylesheet" href="./templates/default/template_styles.css"><!----------------------------------------------------------------------------->
-<!-- Библиотеки и плагины JS-->
-    <script src="./templates/default/plugins/jquery-3.5.1.min.js" defer></script>
-    <script src="./templates/default/plugins/bootstrap-4.5.0/js/bootstrap.min.js" defer></script>
-    <script src="./templates/default/plugins/Magnific-Popup/jquery.magnific-popup.min.js" defer></script>
-    <script src="./templates/default/plugins/slick/slick.min.js" defer></script><!----------------------------------------------------------------------------->
-<!-- Основной файл скриптов -->
-    <script src="./templates/default/script.js" defer></script><!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="./templates/default/template_styles.css">
   </head>
   <body>
     <div class="wrapper">
-      <nav class="navigation">
+      <div class="popup--closed" id="popup">
+        <div class="popup__bg"></div>
+        <div class="popup"><a class="popup__close" href="#">+</a>
+          <form class="formCall" method="post" action="./sendCall.php" id="formCall">
+            <h2 class="formCall__title">Заказать звонок</h2>
+            <input class="formCall__input" type="text" placeholder="Ваше имя" name="name" required>
+            <input class="formCall__input" type="tel" placeholder="Номер телефона" name="phone" required>
+            <input class="formCall__input" type="email" placeholder="Почта" name="email" required>
+            <input class="formCall__submit" type="submit">
+          </form>
+        </div>
+      </div>
+      <nav class="navigation blur--call">
         <div class="navigation__content">
-          <div class="navigation__demo navigation--botline"><span class="hvr-grow">Демо-доступ</span>
+          <div class="navigation__demo navigation--botline"><span class="hvr-shadow-radial">Демо-доступ</span>
             <div class="navigation__close" id="nav-close">+</div>
           </div>
           <div class="navigation__order navigation--botline">
-            <div class="order hvr-grow"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
+            <div class="order hvr-grow popupTrg"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
           </div>
           <div class="navigation__list">
                 <ul class="navlist">
-                  <li class="navlist__item">Главная</li>
-                  <li class="navlist__item">О компании</li>
-                  <li class="navlist__item">Система и компоненты CRM</li>
-                  <li class="navlist__item">Вендинг аналитика</li>
-                  <li class="navlist__item">Тарифы и цены</li>
-                  <li class="navlist__item">Полезная информация</li>
-                  <li class="navlist__item">Контакты</li>
+                  <li class="navlist__item hvr-underline-reveal">Главная</li>
+                  <li class="navlist__item hvr-underline-reveal">О компании</li>
+                  <li class="navlist__item hvr-underline-reveal">Система и компоненты CRM</li>
+                  <li class="navlist__item hvr-underline-reveal">Вендинг аналитика</li>
+                  <li class="navlist__item hvr-underline-reveal">Тарифы и цены</li>
+                  <li class="navlist__item hvr-underline-reveal">Полезная информация</li>
+                  <li class="navlist__item hvr-underline-reveal">Контакты</li>
                 </ul>
           </div>
         </div>
       </nav>
-      <header class="header animated slideInDown">
+      <header class="header animated slideInDown blur--call">
         <div class="header__content">
           <div class="header__info">
-            <div class="header__logo hvr-grow"><a class="header__tohome" href="/"><img src="./templates/default/images/header/header_logo.png" alt="logo"></a></div>
+            <div class="header__logo hvr-hang"><a class="header__tohome" href="/"><img src="./templates/default/images/header/header_logo.png" alt="logo"></a></div>
             <div class="header__title">
                   <div class="decision"><span>Профессиональные </span><span>решения </span><span>в области вендинга</span></div>
             </div>
           </div>
           <div class="header__contacts">
                 <div class="contacts">
-                  <div class="contacts__phone hvr-grow"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
+                  <div class="contacts__phone hvr-buzz"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
                   <div class="contacts__social">
                         <div class="social"><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/whatsapp.svg" alt="whatsapp"></a><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/viber.svg" alt="viber"></a><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/telegram.svg" alt="telegram"></a>
                         </div>
                   </div>
-                      <div class="order hvr-grow"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
+                      <div class="order popupTrg hvr-grow"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
                 </div>
             <div class="header__line"></div>
             <div class="header__demo"><span class="hvr-grow">Демо-доступ</span></div>
             <div class="header__burger">
-              <div class="burger" id="burger">
+              <div class="burger hvr-pop" id="burger">
                 <div class="burger__line line1"></div>
                 <div class="burger__line line2"></div>
                 <div class="burger__line line3"></div>
@@ -80,8 +82,8 @@
           </div>
         </div>
       </header>
-      <div class="content">
-        <section class="section preview animated fadeIn">
+      <div class="content blur--side blur--call">
+        <section class="section preview">
           <div class="preview__slider">
             <div class="previewSlick">
               <div class="previewSlick__item">
@@ -92,8 +94,8 @@
                         <polygon points="297,449 181,449 3,1 146,1 241,257 333,1 477,1 "></polygon>
                       </svg>
                       <picture>
-                        <source srcset="./templates/default/images/main_pic_large.jpg" media="(min-width: 1200px)">
-                        <source srcset="./templates/default/images/main_pic_medium.jpg" media="(min-width: 768px)"><img src="./templates/default/images/main_pic_small.jpg" alt="main">
+                        <source srcset="./upload/images/preview-slider/main_pic_large.jpg" media="(min-width: 1200px)">
+                        <source srcset="./upload/images/preview-slider/main_pic_medium.jpg" media="(min-width: 768px)"><img src="./upload/images/preview-slider/main_pic_small.jpg" alt="main">
                       </picture>
                     </div>
                   </div>
@@ -101,17 +103,67 @@
                     <h1 class="previewFree__title"><strong>Бесплатное</strong> использование телеметрии 3 месяца</h1>
                     <div class="previewFree__subtitle">Купи Венданалитику и используй 3 месяца. Не понравится - вернем деньги!</div>
                     <div class="previewFree__more"><img src="./templates/default/images/info.svg" alt="info"><span>Дополнительная информация</span>
-                      <div class="previewFree__text animated fadeIn">(смс оплачиваются отдельно) Условие по возврату - установка всех компелктов, активное использование, сохранность оборудования.</div>
+                      <div class="previewFree__text animated fadeIn">(смс оплачиваются отдельно) Условие по возврату - установка всех комплектов, активное использование, сохранность оборудования.</div>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
                         <path d="M0 0, L10 7, L20 0"></path>
                       </svg>
                     </div>
-                    <button class="previewFree__get">Получить предложение</button>
+                    <button class="previewFree__get popupTrg hvr-shadow-radial">Получить предложение</button>
                   </div>
                 </div>
               </div>
-              <div class="previewSlick__item"></div>
-              <div class="previewSlick__item"></div>
+              <div class="previewSlick__item">
+                <div class="previewFree">
+                  <div class="previewFree__bg">
+                    <div class="previewFreeImg">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 450">
+                        <polygon points="297,449 181,449 3,1 146,1 241,257 333,1 477,1 "></polygon>
+                      </svg>
+                      <picture>
+                        <source srcset="./upload/images/preview-slider/main_pic_large.jpg" media="(min-width: 1200px)">
+                        <source srcset="./upload/images/preview-slider/main_pic_medium.jpg" media="(min-width: 768px)"><img src="./upload/images/preview-slider/main_pic_small.jpg" alt="main">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="previewFree__content">
+                    <h1 class="previewFree__title"><strong>Бесплатное</strong> использование телеметрии 3 месяца</h1>
+                    <div class="previewFree__subtitle">Купи Венданалитику и используй 3 месяца. Не понравится - вернем деньги!</div>
+                    <div class="previewFree__more"><img src="./templates/default/images/info.svg" alt="info"><span>Дополнительная информация</span>
+                      <div class="previewFree__text animated fadeIn">(смс оплачиваются отдельно) Условие по возврату - установка всех комплектов, активное использование, сохранность оборудования.</div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
+                        <path d="M0 0, L10 7, L20 0"></path>
+                      </svg>
+                    </div>
+                    <button class="previewFree__get popupTrg hvr-shadow-radial">Получить предложение</button>
+                  </div>
+                </div>
+              </div>
+              <div class="previewSlick__item">
+                <div class="previewFree">
+                  <div class="previewFree__bg">
+                    <div class="previewFreeImg">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 450">
+                        <polygon points="297,449 181,449 3,1 146,1 241,257 333,1 477,1 "></polygon>
+                      </svg>
+                      <picture>
+                        <source srcset="./upload/images/preview-slider/main_pic_large.jpg" media="(min-width: 1200px)">
+                        <source srcset="./upload/images/preview-slider/main_pic_medium.jpg" media="(min-width: 768px)"><img src="./upload/images/preview-slider/main_pic_small.jpg" alt="main">
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="previewFree__content">
+                    <h1 class="previewFree__title"><strong>Бесплатное</strong> использование телеметрии 3 месяца</h1>
+                    <div class="previewFree__subtitle">Купи Венданалитику и используй 3 месяца. Не понравится - вернем деньги!</div>
+                    <div class="previewFree__more"><img src="./templates/default/images/info.svg" alt="info"><span>Дополнительная информация</span>
+                      <div class="previewFree__text animated fadeIn">(смс оплачиваются отдельно) Условие по возврату - установка всех комплектов, активное использование, сохранность оборудования.</div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14">
+                        <path d="M0 0, L10 7, L20 0"></path>
+                      </svg>
+                    </div>
+                    <button class="previewFree__get popupTrg hvr-shadow-radial">Получить предложение</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -205,7 +257,7 @@
             <div class="about__logo"><img src="./templates/default/images/footer_logo.png" alt="Logo"></div>
             <div class="about__slogan">Профессиональные решения в области вендинга</div>
           </div>
-          <button class="about__start">Начать</button>
+          <button class="about__start popupTrg hvr-shadow-radial">Начать</button>
         </section>
         <section class="section reviews animated fadeIn">
           <h2 class="reviews__title"> <span>Наши </span><span>Довольные </span><span>клиенты</span></h2>
@@ -225,9 +277,6 @@
                         <div class="review__quote"><img src="./templates/default/images/reviews_quote.svg" alt="quote"></div>
                         <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
                       </div>
-                      <div class="review__all"><span>Все отзывы</span>
-                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
-                      </div>
                     </div>
                   </div>
                   <div class="review">
@@ -243,9 +292,6 @@
                       <div class="review__description">
                         <div class="review__quote"><img src="./templates/default/images/reviews_quote.svg" alt="quote"></div>
                         <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
-                      </div>
-                      <div class="review__all"><span>Все отзывы</span>
-                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
                       </div>
                     </div>
                   </div>
@@ -263,38 +309,42 @@
                         <div class="review__quote"><img src="./templates/default/images/reviews_quote.svg" alt="quote"></div>
                         <div class="review__text">Мы долго выбирали для нашей сети и аппаратуру и программную оболочку для обслуживания. Все игроки на рынке предлагают примерно тот же набор в комплексе с примерно равной стоимостью обслуживания за автомат. Выбрали Венд-лаб и предложение от них внимательно сравнив CRM. Удобно, быстро “прокинули” её к своей 1 Ске. Сейчас зреем к установке своего сервера в офисе, получится порядочная экономия, практически будем платить за SMS</div>
                       </div>
-                      <div class="review__all"><span>Все отзывы</span>
-                        <div class="review__arrow"><img src="./templates/default/images/slider_arrow.png" alt="arrow"></div>
-                      </div>
                     </div>
                   </div>
+            </div>
+            <div class="reviews__all"><a class="reviews__allText hvr-skew-forward" href="">Все отзывы</a>
+              <div class="reviews__allImage"><img src="./templates/default/images/news_arrow.png" alt="arrow"></div>
             </div>
           </div>
         </section>
         <section class="section news animated fadeIn">
           <div class="news__content">
             <h2 class="news__title">Новости</h2>
-            <div class="news__all"> <a class="news__allText" href="">Смотреть все новости</a>
+            <div class="news__all"><a class="news__allText hvr-skew-forward" href="">Смотреть все новости</a>
               <div class="news__allImg"> <img src="./templates/default/images/news_arrow.png" alt="arrow"></div>
             </div>
             <div class="news__items">
               <div class="article">
-                <div class="article__image"><img src="./templates/default/images/news_webinar.jpg" alt="webinar"></div>
+                <div class="article__image"><img src="./upload/images/news-slider/news_webinar.jpg" alt="webinar"></div>
                 <h5 class="article__name"><span class="article__nameMain">Приглашаем на вебинар "Аналитика 2.0"</span><span class="article__nameAdd">и еще какой-то текст</span></h5>
                 <div class="article__date">24 сентября 2020</div>
               </div>
               <div class="article">
-                <div class="article__image"><img src="./templates/default/images/news_exhibition.jpg" alt="webinar"></div>
+                <div class="article__image"><img src="./upload/images/news-slider/news_exhibition.jpg" alt="webinar"></div>
                 <h5 class="article__name"><span class="article__nameMain">Выставка "Вендинг 2020" в Манеже</span><span class="article__nameAdd"> </span></h5>
                 <div class="article__date">22 марта 2020</div>
               </div>
               <div class="article">
-                <div class="article__image"><img src="./templates/default/images/news_webinar.jpg" alt="webinar"></div>
+                <div class="article__image"><img src="./upload/images/news-slider/news_webinar.jpg" alt="webinar"></div>
                 <h5 class="article__name"><span class="article__nameMain">Приглашаем на вебинар "Аналитика 2.0"</span><span class="article__nameAdd">и еще какой-то текст</span></h5>
                 <div class="article__date">24 сентября 2020</div>
               </div>
               <div class="article">
-                <div class="article__image"><img src="./templates/default/images/news_exhibition.jpg" alt="webinar"></div>
+                <div class="article__image"><img src="./upload/images/news-slider/news_exhibition.jpg" alt="webinar"></div>
+                <h5 class="article__name"><span class="article__nameMain">Выставка "Вендинг 2020" в Манеже</span><span class="article__nameAdd"> </span></h5>
+              </div>
+              <div class="article">
+                <div class="article__image"><img src="./upload/images/news-slider/news_exhibition.jpg" alt="webinar"></div>
                 <h5 class="article__name"><span class="article__nameMain">Выставка "Вендинг 2020" в Манеже</span><span class="article__nameAdd"> </span></h5>
                 <div class="article__date">22 марта 2020</div>
               </div>
@@ -305,43 +355,43 @@
           <div class="partners__content">
             <div class="partners__items">
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_1.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_1.png" alt="partners_1"></div>
               </div>
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_2.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_2.png" alt="partners_2"></div>
               </div>
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_1.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_1.png" alt="partners_1"></div>
               </div>
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_2.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_2.png" alt="partners_2"></div>
               </div>
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_1.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_1.png" alt="partners_1"></div>
               </div>
               <div class="partner">
-                <div class="partner__logo"><img src="./templates/default/images/partners_2.png" alt="arrow"></div>
+                <div class="partner__logo"><img src="./upload/images/partners-slider/partners_2.png" alt="partners_2"></div>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <footer class="footer animated slideInUp">
+      <footer class="footer animated slideInUp blur--side blur--call">
         <div class="footer__content">
           <div class="footer__info">
-            <div class="footer__logo hvr-grow"><a class="footer__tohome" href="/"><img src="./templates/default/images/footer/footer_logo.png" alt="logo"></a></div>
+            <div class="footer__logo hvr-hang"><a class="footer__tohome" href="/"><img src="./templates/default/images/footer/footer_logo.png" alt="logo"></a></div>
             <div class="footer__title">
                   <div class="decision decision--footer"><span>Профессиональные </span><span>решения </span><span>в области вендинга</span></div>
             </div>
           </div>
           <div class="footer__contacts">
                 <div class="contacts contacts--footer">
-                  <div class="contacts__phone hvr-grow"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
+                  <div class="contacts__phone hvr-buzz"><a class="contacts__tophone" href="tel:84997034217"> <span>8 (499) 703-42-17</span></a></div>
                   <div class="contacts__social">
                         <div class="social"><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/whatsapp.svg" alt="whatsapp"></a><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/viber.svg" alt="viber"></a><a class="social__link hvr-grow" href="#"><img src="./templates/default/images/socials/telegram.svg" alt="telegram"></a>
                         </div>
                   </div>
-                      <div class="order hvr-grow"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
+                      <div class="order popupTrg hvr-grow"><img src="./templates/default/images/header/technology.svg" alt="technology"><span>Заказать звонок</span></div>
                 </div>
           </div>
           <div class="footer__address">
@@ -352,13 +402,13 @@
           <div class="footer__company">© ООО “Венд-Лаб” 2020</div>
           <div class="footer__navlist">
                 <ul class="navlist navlist--footer">
-                  <li class="navlist__item">Главная</li>
-                  <li class="navlist__item">О компании</li>
-                  <li class="navlist__item">Система и компоненты CRM</li>
-                  <li class="navlist__item">Вендинг аналитика</li>
-                  <li class="navlist__item">Тарифы и цены</li>
-                  <li class="navlist__item">Полезная информация</li>
-                  <li class="navlist__item">Контакты</li>
+                  <li class="navlist__item hvr-underline-reveal">Главная</li>
+                  <li class="navlist__item hvr-underline-reveal">О компании</li>
+                  <li class="navlist__item hvr-underline-reveal">Система и компоненты CRM</li>
+                  <li class="navlist__item hvr-underline-reveal">Вендинг аналитика</li>
+                  <li class="navlist__item hvr-underline-reveal">Тарифы и цены</li>
+                  <li class="navlist__item hvr-underline-reveal">Полезная информация</li>
+                  <li class="navlist__item hvr-underline-reveal">Контакты</li>
                 </ul>
           </div>
           <div class="footer__download">
@@ -370,11 +420,17 @@
           <div class="footer__access">
             <div class="access">
               <div class="access__politic"><span>Политика конфиденциальности</span></div>
-              <div class="access__created"><span>Сайт создан в РУ ДИЗАЙН</span></div>
+              <div class="access__created hvr-backward"><span>Сайт создан в РУ ДИЗАЙН</span></div>
             </div>
           </div>
         </div>
       </footer>
-    </div>
+    </div><!----------------------------------------------------------------------------->
+<!-- Библиотеки и плагины JS-->
+    <script src="./templates/default/plugins/jquery-3.5.1.min.js"></script>
+    <script src="./templates/default/plugins/slick/slick.min.js"></script><!----------------------------------------------------------------------------->
+<!-- Основной файл скриптов -->
+    <script src="./templates/default/script.js"></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </body>
 </html>

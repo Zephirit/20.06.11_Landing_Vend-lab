@@ -93,19 +93,21 @@
 	&__content {
 		position: relative;
 		width: 100%;
-		margin: 55px 0 90px;
+		margin: 55px 0 0;
+		padding-bottom: 70px;
 		// width: auto;
 		height: auto;
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		@include tablets {
 			display: flex;
 			width: 100%;
 			padding: 0 15px;
-			margin: 55px 0;
+			margin: 55px 0 30px;
 		}
 		@include desktop {
-			width: 1170px;
+			width: 1200px;
 			margin: 80px 0 0;
 			padding: 0;
 		}
@@ -113,8 +115,8 @@
 	&__items {
 		position: relative;
 		@include tablets {
-			display: flex;
-			justify-content: space-between;
+			// display: flex;
+			// justify-content: space-between;
 			width: 100%;
 			margin-top: 18px;
 		}
