@@ -3,24 +3,27 @@ $mainColor: rgb(16,16,16);
 $subColor: rgb(30,45,89);
 $backColor: white;
 $contrColor: rgb(0,194,246);
-//Общие настройки стилей
+
 @import "./base/_mixins.scss";
 @import "./base/_base.scss";
 @import "./base/_fonts.scss";
 
 // Сборка частей проекта
 
-// Страницы
+/* ---СТРАНИЦЫ--- */
 @import "./pages/index.scss";
 // Модули
+/* ---СЕКЦИИ--- */
 @import "./modules/_1-preview.scss";
 @import "./modules/_2-advantages.scss";
 @import "./modules/_3-about.scss";
 @import "./modules/_4-reviews.scss";
-@import "./modules/_review.scss";
 @import "./modules/_5-news.scss";
 @import "./modules/_6-partners.scss";
-@import "./modules/_slick.scss";
+@import "./modules/_header.scss";
+@import "./modules/_footer.scss";
+/* ---КОМПОНЕНТЫ--- */
+@import "./modules/_review.scss";
 @import "./modules/_article.scss";
 @import "./modules/_navigation.scss";
 @import "./modules/_popup.scss";
@@ -31,7 +34,7 @@ $contrColor: rgb(0,194,246);
 @import "./modules/_decision.scss";
 @import "./modules/_download.scss";
 @import "./modules/_order.scss";
-@import "./modules/_header.scss";
-@import "./modules/_footer.scss";
 @import "./modules/_address.scss";
 @import "./modules/_access.scss";
+/* ---ПРОЧЕЕ--- */
+@import "./modules/_slick.scss";

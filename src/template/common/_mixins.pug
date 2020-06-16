@@ -22,13 +22,20 @@ mixin contacts(cl)
 		+order
 mixin navlist(cl)
 	ul.navlist(class=cl)
-		li.navlist__item.hvr-underline-reveal Главная
-		li.navlist__item.hvr-underline-reveal О компании
-		li.navlist__item.hvr-underline-reveal Система и компоненты CRM
-		li.navlist__item.hvr-underline-reveal Вендинг аналитика
-		li.navlist__item.hvr-underline-reveal Тарифы и цены
-		li.navlist__item.hvr-underline-reveal Полезная информация
-		li.navlist__item.hvr-underline-reveal Контакты
+		li.active
+			a(href="#").hvr-underline-reveal Главная
+		li
+			a(href="#").hvr-underline-reveal О компании
+		li
+			a(href="#").hvr-underline-reveal Система и компоненты CRM
+		li
+			a(href="#").hvr-underline-reveal Вендинг аналитика
+		li
+			a(href="#").hvr-underline-reveal Тарифы и цены
+		li
+			a(href="#").hvr-underline-reveal Полезная информация
+		li
+			a(href="#").hvr-underline-reveal Контакты
 mixin review(cl,name,job,pic,desc)
 	.review(class=cl)
 		.review__content

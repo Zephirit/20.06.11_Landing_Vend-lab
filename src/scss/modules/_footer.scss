@@ -92,6 +92,7 @@ footer {
 	}
 	&__navlist {
 		@include centered(x);
+		z-index: 50;
 		display: none;
 		& .navlist__item:first-child {
 			display: none;

@@ -1,8 +1,9 @@
+/* ---КОМПОНЕНТ СПИСОК НАВИГАЦИИ--- */
 .navlist {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
+	overflow-y: auto;
 	max-height: calc(100vh - 259px);
 	@include tablets{
 		max-height: calc(100vh - 124px);
@@ -11,26 +12,45 @@
 		max-height: none;
 		overflow-y: auto;
 	}
-	&__item {
+	& li {
 		position: relative;
 		flex-shrink: 0;
 		cursor: pointer;
-		padding: 15px 20px;
 		border-bottom: 1px solid #f1f1f1;
 		&:last-child{
 			display: none;
 		}
 		@include desktop {
-			padding: 15px 0;
+			// padding: 15px 0;
 			border-bottom: none;
+		}
+		& a{
+			position: relative;
+			text-decoration: none;
+			padding: 15px 20px;
+			
+			width: 100%;
+			height: 100%;
+			// @include desktop {
+				color: $mainColor;
+			// }
+		}
+		&.active a{
+			color: darken($contrColor,10%);
 		}
 	}
 	&--footer{
-		
 		margin: 20px 0;
-		& .navlist__item {
-			padding: 6px 0;
+		& li {
+			padding: 0;
 			border-bottom: none;
+			&:first-child{
+				display: none;
+			}
+			& a{
+				padding: 6px 0;
+				color: $backColor;
+			}
 			&:last-child{
 				display: block;
 			}

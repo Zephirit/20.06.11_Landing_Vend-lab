@@ -17,6 +17,7 @@ window.onload = () => {
 			document.body.classList.remove('notScroll')
 		})
 	}
+
 	const _previewSlider = () => {
 		const slick = $('.previewSlick').slick({
 			nextArrow: "<div class='slick-next'><img src='./templates/default/images/slider_arrow.png' alt='next'></div>",

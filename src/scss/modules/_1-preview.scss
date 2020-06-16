@@ -288,35 +288,46 @@
 			&.slick-active {
 				& .previewFree__bg {
 					opacity: 1;
-					animation: slideInDown 0.4s 0.4s;
-					transition: opacity 0.4s 0.4s;
+					animation: slideInDown .4s;
+					// transition: opacity 0.4s 0.4s;
 					& svg {
 						opacity: 1;
-						animation: bounceInDown 0.4s 1s;
-						transition: opacity 0.2s 1s;
+						animation: bounceInDown 0.4s;
+						// transition: opacity 0.2s 1s;
 					}
 				}
 				& .previewFree__title {
 					opacity: 1;
-					animation: slideInLeft 0.4s 0.2s;
-					transition: opacity 0.4s 0.2s;
+					animation: slideInLeft 0.4s;
+					// transition: opacity 0.4s 0.2s;
 				}
 				& .previewFree__subtitle {
 					opacity: 1;
-					animation: slideInLeft 0.4s 0.4s;
-					transition: opacity 0.4s 0.4s;
+					animation: slideInLeft 0.4s;
+					// transition: opacity 0.4s 0.4s;
 				}
 				& .previewFree__more {
 					opacity: 1;
-					animation: slideInLeft 0.4s 0.5s;
-					transition: opacity 0.4s 0.5s;
+					animation: slideInLeft 0.4s;
+					// transition: opacity 0.4s 0.5s;
 				}
 				& .previewFree__get {
 					opacity: 1;
-					animation: slideInLeft 0.4s 0.7s;
-					transition: opacity 0.4s 0.7s;
+					animation: slideInLeft 0.4s;
+					// transition: opacity 0.4s 0.7s;
 				}
 			}
 		}
+	}
+}
+@keyframes opacity {
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
 	}
 }
